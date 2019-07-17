@@ -1,3 +1,4 @@
+	
 	// Don't change anything in this section unless you know what you are doing
 		function sayIt(textIt) {//This is the function that takes the phrases, alerts and then prints to the page.
 			document.getElementById("id_top_table").style.display = "block";  
