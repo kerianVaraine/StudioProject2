@@ -1,0 +1,157 @@
+.grass {
+    background-color: #3F681C;
+    border-radius: 4px;
+}
+
+.rain {
+    background-color: #2C7873;
+    border-radius: 4px;
+}
+
+.aquamarine {
+    background-color: #98DBC6;
+    border-radius: 4px;
+}
+
+.turquoise {
+    background-color: #5BC8AC;
+    border-radius: 4px;
+}
+
+.canaryyellow {
+    background-color: #E6D72A;
+    border-radius: 4px;
+}
+
+.pinktulip {
+    background-color: #F18D9E;
+    border-radius: 4px;
+}
+
+.sunset {
+    background-color: #FB6542;
+    border-radius: 4px;
+}
+
+.sky {
+    background-color: #375E97;
+    border-radius: 4px;
+}
+
+.cool {
+    color: blue;
+}
+
+.spoken {
+    background-color: linen;
+    color: green;
+    padding: 6px 12px;
+    margin-bottom: 0;
+}
+
+.pastspoken {
+    background-color: linen;
+    color: green;
+    padding: 6px 12px;
+    margin-bottom: 0;
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media screen and (max-width: 575px) {
+    .cool {
+        font-size: 12px;
+    }
+
+    .button {
+        font-size: 12px;
+        vertical-align: middle;
+    }
+
+    .spoken {
+        font-size: 12px;
+    }
+
+    .pastspoken {
+        font-size: 12px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .cool {
+        font-size: 20px;
+    }
+
+    .button {
+        font-size: 20px;
+        vertical-align: middle;
+    }
+
+    .spoken {
+        font-size: 20px;
+    }
+
+    .pastspoken {
+        font-size: 20px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .cool {
+        font-size: 40px;
+    }
+
+    .button {
+        font-size: 50px;
+        vertical-align: middle;
+    }
+
+    .spoken {
+        font-size: 30px;
+    }
+
+    .pastspoken {
+        font-size: 30px;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .cool {
+        font-size: 30px;
+    }
+
+    .button {
+        font-size: 30px;
+        vertical-align: middle;
+    }
+
+    .spoken {
+        font-size: 30px;
+    }
+
+    .pastspoken {
+        font-size: 30px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media screen and (min-width: 1200px) {
+    .cool {
+        font-size: 30px;
+    }
+
+    .button {
+        font-size: 40px;
+        vertical-align: middle;
+    }
+
+    .spoken {
+        font-size: 30px;
+    }
+
+    .pastspoken {
+        font-size: 30px;
+    }
+}
