@@ -6,7 +6,7 @@ let synth = window.speechSynthesis;
 
 //turn this into a function, where params are location to pull from.
 let phrases;
-let contentLocation = "../content/phrases.json";
+let contentLocation = "./content/phrases.json";
 let request = new XMLHttpRequest();
 request.open('GET', contentLocation);
 request.responseType = 'json';
