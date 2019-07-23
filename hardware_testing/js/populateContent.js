@@ -3,7 +3,6 @@ let synth = window.speechSynthesis;
 //parse content from json file, then populate page with buttons from the selected section.
 // From:
 //https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
-
 //turn this into a function, where params are location to pull from.
 let phrases;
 let contentLocation = "./content/phrases.json";
@@ -15,25 +14,28 @@ request.send();
 request.onload = function () {
     phrases = request.response;
 }
-
+// end of json importing
+//
+//
 // adds button with all functionality and name
 let getButtonText = function (pCat, index) {
-    let button = document.createElement("button");
-    button.innerText = pCat[index][0];
-    button.className = "largeButton , entry";
-    button.onclick = function () {
-        synth.speak(new SpeechSynthesisUtterance(pCat[index][1]));
-        removeEntries();
-        document.getElementsByClassName("section")[0].focus();
-    }; //makes is speak aloud when pressed
-    document.getElementById("entries").appendChild(button); //adds to page.
+    let button = document.createElement("button");  //create button element
+    button.innerText = pCat[index][0];              //add button text from json file
+    button.className = "largeButton , entry";       //assign class/css/styling
+    button.onclick = function () {                  //onclick functionality
+        synth.speak(new SpeechSynthesisUtterance(pCat[index][1])); //speak phrase from json
+        removeEntries();                            //remove buttons once clicked
+        document.getElementsByClassName("section")[0].focus();  //return focus to categories
+    };
+    document.getElementById("entries").appendChild(button); //adds all butons to page.
 }
 
 // populates the content div with buttons and stores the speech synth inside the button
 let populateEntries = function (category) {
-    //make reference to json.category;
-    let pCat;
+    // make reference to json.category;
+    let pCat; // ref to json category array
     let arrLength;
+    // this selects the catagory inside the json file to loop through and populate buttons
     switch (category) {
         case("common"):
             pCat = phrases.common;
@@ -49,12 +51,13 @@ let populateEntries = function (category) {
             break;
     }
     arrLength = pCat.length;
-    console.log(arrLength);
+    //loop to populate page with json info
     for (let i = 0; i < arrLength; i++) {
         getButtonText(pCat, i);
     }
 }
 
+//remove buttons in entry div
 function removeEntries() {
     let elements = document.getElementsByClassName("entry");
     while (elements.length > 0) {
