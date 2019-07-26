@@ -1,0 +1,28 @@
+{
+    "common": [
+        ["Yes", "Yes"],
+        ["No", "No"],
+        ["Please repeat", "could you please say that again?"],
+        ["Hello", "Hello"]
+    ],
+    "comfort": [
+        ["Itchy nose", "I have an itchy nose, please scratch it!"],
+        ["Lip Balm", "I would like some lip Balm"],
+        ["Position", "I am uncofortable, can I change position please?"],
+        ["Cold", "I am feeling cold, could I get more warmth please?"] ,
+        ["Hot", "I am feeling too hot, please make it colder in here?"]
+    ],
+    "feel" :[
+        ["Sad", "I feel really sad and need consoling."],
+        ["Confused", "I feel very confused, could you please explain to me what is going on?"],
+        ["Anxious", "I feel anxious and need reassurance."],
+        ["Angry", "I'm angry and I need to talk to somebody about it."],
+        ["Frustrated", "I am feeling frustrated because...(select next option maybe?)"]
+    ],
+    "entertainment" :[
+        ["Radio On", "Could you please turn the radio on?"],
+        ["Radio Off", "Could you turn the radio off please?"],
+        ["TV on", "Could you please turn the TV on?"],
+        ["TV off", "Could you please turn the TV off?"]
+    ]
+}
