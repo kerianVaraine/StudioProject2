@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scanning test with grids</title>
+    <link rel="stylesheet" href="scanningTest.css">
+    <script src="./js/ally.min.js"></script>
+
+</head>
+<body>
+    <div id="pageContainer" class="pageContainer homeLayout">
+        <div id="header" class="header">here is the time and the date and the location at which you currently are</div>
+        <div id="categories" class="categories"></div>
+        <div id="phrases" class="phrases"> 
+            <div class="catRow" tabindex="0">
+                <button id="common" class="phraseButton">Common use </button>
+                <button id="comfort" class="phraseButton">I am</button>
+                <button id="feel" class="phraseButton">something </button>
+                <button id="entertainment" class="phraseButton">this Thing </button>
+            </div>
+            <div class="catRow" tabindex="0">
+                <button id="4" class="phraseButton">continue </button>
+                <button id="5" class="phraseButton">conversational </button>
+                <button id="6" class="phraseButton">somthgn </button>
+                <button id="7" class="phraseButton">mother</button>
+            </div>
+            <div class="catRow" tabindex="0">
+                <button id="8" class="phraseButton">family</button>
+                <button id="9" class="phraseButton">continue </button>
+                <button id="10" class="phraseButton">hom </button>
+                <button id="11" class="phraseButton">shgn </button>
+            </div>
+        </div>
+
+<!-- 
+Tabindex 0 on divs should be toggleable, where they take focus first, until selected, then dig into heirachy with next element focus.
+    ally js, maybe create array of all divs containing a class, then dig in?
+
+        for focus trapping|||||||
+    https://codepen.io/islam8/pen/BPvazR
+
+key code ===   query selected elements = element.setAttribute('tabindex', "-1") or 0 for tabbable.
+
+
+    apply tabindex = 0 to all divs with class catRow; un tabindex everything else, thus trapping focus.
+    
+    when select key is pressed on div, trap focus within active div, set all children within selected div, remove from all others.
+
+ -->
+
+
+
+<script src="./js/scanning.js"></script>
+
+
+
+    </div>
+    
+</body>
+</html>
