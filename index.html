@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,10 @@
     <link rel="stylesheet" href="./style/normalize.css">
     <!-- Main Grid Declarations -->
     <link rel="stylesheet" href="./style/grid.css">
+    <!-- Style Declarations -->
+    <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
     <div id="root" class='mainContainer'>
         <header id="mainHead" class="header">
@@ -25,19 +29,25 @@
                 <!-- buttons go here for main categories -->
                 <!-- 5 x 1fr grid is set up -->
                 <!-- These will need a class of their own, normal, focus & selected -->
-                <button>here</button>
-                <button>there</button>
-                <button>everywhere</button>
+                <!-- class = "section" for button loading -->
+                <button id="basic" class="section">Basic Responses</button>
+                <button id="am">I am</button>
+                <button id="need">I need</button>
+                <button id="conversation">Conversation</button>
             </div>
-            <div id="" class="subcategories">
-                subCats
+            <div id="entries" class="subcategories content">
+                <!-- subcategories &|| basic responses -->
             </div>
             <div id="" class="exampleText">
                 example texts
             </div>
             <!-- end of mainContent Div -->
         </div>
+
         <!-- end of Root div -->
     </div>
+    <!-- Script loading -->
+    <script src="./js/populateContent.js"></script>
 </body>
+
 </html>

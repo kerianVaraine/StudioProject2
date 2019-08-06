@@ -5,7 +5,7 @@ let synth = window.speechSynthesis;
 //https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
 //turn this into a function, where params are location to pull from.
 let phrases;
-let contentLocation = "./content/phrases.json";
+let contentLocation = "./content/categories.json";
 let request = new XMLHttpRequest();
 request.open('GET', contentLocation);
 request.responseType = 'json';
@@ -21,7 +21,7 @@ request.onload = function () {
 let getButtonText = function (pCat, index) {
     let button = document.createElement("button");  //create button element
     button.innerText = pCat[index][0];              //add button text from json file
-    button.className = "largeButton , entry";       //assign class/css/styling
+    button.className = "entry";       //assign class/css/styling
     button.onclick = function () {                  //onclick functionality
         synth.speak(new SpeechSynthesisUtterance(pCat[index][1])); //speak phrase from json
         removeEntries();                            //remove buttons once clicked
@@ -37,8 +37,8 @@ let populateEntries = function (category) {
     let arrLength;
     // this selects the catagory inside the json file to loop through and populate buttons
     switch (category) {
-        case("common"):
-            pCat = phrases.common;
+        case("basic"):
+            pCat = phrases.basic;
             break;
         case ("comfort"):
             pCat = phrases.comfort;
@@ -83,11 +83,11 @@ for (let i = 0; i < secButtArr.length; i++) {
     }
 }
 
-//assign shortcuts button
-document.getElementById("assignShortCut").onclick = function () {
-    if (leftKey == undefined) {
-        assignShortcut();
-    }
-    document.getElementById("assignShortCut").innerText = "reset shortcuts";
-    resetShortcuts();
-}
+//assign shortcuts button 
+// document.getElementById("assignShortCut").onclick = function () {
+//     if (leftKey == undefined) {
+//         assignShortcut();
+//     }
+//     document.getElementById("assignShortCut").innerText = "reset shortcuts";
+//     resetShortcuts();
+// }

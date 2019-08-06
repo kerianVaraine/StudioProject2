@@ -1,0 +1,5 @@
+/* Style button in entries */
+#entries button {
+    width:100%;
+    color:red;
+}

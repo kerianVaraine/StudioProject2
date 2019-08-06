@@ -1,9 +1,11 @@
 {
-    "common": [
+    "basic": [
         ["Yes", "Yes"],
         ["No", "No"],
-        ["Please repeat", "could you please say that again?"],
-        ["Hello", "Hello"]
+        ["Stop!", "Stop!"],
+        ["Explain", "Could you please explain that to me again?"],
+        ["Thank you", "Thank you."],
+        ["Please repeat", "could you please say that again?"]
     ],
     "comfort": [
         ["Itchy nose", "I have an itchy nose, please scratch it!"],

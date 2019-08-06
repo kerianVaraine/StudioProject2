@@ -1,0 +1,29 @@
+{
+    "basic": [
+        ["Yes", "Yes"],
+        ["No", "No"],
+        ["Stop!", "Stop!"],
+        ["Explain", "Could you please explain that to me again?"],
+        ["Thank you", "Thank you."],
+        ["Please repeat", "could you please say that again?"]
+    ],
+   "am" :[
+       ["Physical", ""],
+       ["Emotional", ""]
+   ],
+   "pain": [
+    ["General", "I am in general pain."],
+    ["Select", ""]   
+   ]
+   "need":[
+       ["Move", ""],
+       ["Room Changes", ""],
+       ["Personal", ""],
+       ["Medical", ""]
+   ],
+   "conversation":[
+       ["I would like to ask you...", ""],
+       ["I would like you to ask me...", ""],
+       ["Could you please find out...", ""]
+   ]
+}
