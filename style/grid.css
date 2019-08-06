@@ -40,13 +40,13 @@ div {
     grid-area: mainCategories;
     display:grid;
     grid-template-columns: repeat(5, 1fr);
-    margin: 0 10px;
+    margin: 5px 10px;
     grid-gap: 10px;
 
 }
 
 .subcategories {
-    margin: 0 10px;
+    margin: 5px 10px;
     grid-area: subcategories;
     display:grid;
     grid-template-columns: repeat(6, 1fr);
