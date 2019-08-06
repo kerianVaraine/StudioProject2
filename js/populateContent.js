@@ -40,15 +40,18 @@ let populateEntries = function (category) {
         case("basic"):
             pCat = phrases.basic;
             break;
-        case ("comfort"):
-            pCat = phrases.comfort;
+        case ("am"):
+            pCat = phrases.am;
             break;
-        case ("feel"):
-            pCat = phrases.feel;
+        case ("pain"):
+            pCat = phrases.pain;
             break;
-        case ("entertainment"):
-            pCat = phrases.entertainment;
+        case ("need"):
+            pCat = phrases.need;
             break;
+            case ("conversation"):
+                pCat = phrases.conversation;
+                break;
     }
     arrLength = pCat.length;
     //loop to populate page with json info
