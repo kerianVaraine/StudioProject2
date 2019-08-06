@@ -1,0 +1,58 @@
+/* need to import normalize.css */
+body {
+    margin:0;
+    padding:0;
+}
+div {
+    border: 1px solid black;
+}
+/* Main Grid Declarations */
+
+.mainContainer {
+    height: 100vh;
+    display:grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas:
+        "header"
+        "mainContent"
+}
+
+.header{
+    grid-area: header;
+    min-height: 100%;
+}
+
+.mainContent{
+    grid-area: mainContent;
+    /* nested grid for content */
+    display:grid;
+    grid-template-rows: 1fr 4fr 2fr 1fr;
+    grid-template-areas:
+        "mainHeader"
+        "mainCategories"
+        "subcategories"
+        "exampleText"
+}
+
+/* Main page SubGrids */
+/* mainHeader */
+.mainHeader {
+    grid-area: mainHeader;
+}
+
+.mainCategories {
+    grid-area: mainCategories;
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 10px;
+    grid-gap: 10px;
+
+}
+
+.subcategories {
+    grid-area: subcategories;
+}
+
+.exampleText {
+    grid-area: exampleText;
+}
