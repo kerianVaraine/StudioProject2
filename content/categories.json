@@ -25,5 +25,15 @@
        ["I would like to ask you...", ""],
        ["I would like you to ask me...", ""],
        ["Could you please find out...", ""]
+   ],
+   "Physical" :[
+       ["Nauseous", "I feel Nauseous"],
+       ["Dizzy", "I am feeling Dizzy"],
+       ["Lightheaded", "I am feeling lightheaded"],
+       ["Breathless", "I am short of breath"],
+       ["Itchy", "I am itchy"],
+       ["Cold", "I am cold"],
+       ["Hot", "I am hot"],
+       ["Can't sleep", "I am struggling to sleep"]
    ]
 }
