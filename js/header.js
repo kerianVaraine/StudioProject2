@@ -11,7 +11,7 @@ function clock() {
     var time = hours + ":" + mins;
     
     document.getElementById("date").innerHTML = ldate;
-    document.getElementById("time").innerHTML = time;
+    document.getElementById("time").innerHTML = "Time: " + time;
 }
 
 
