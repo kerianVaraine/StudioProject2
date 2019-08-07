@@ -1,3 +1,10 @@
+TODOS
+
+make buttons know where they are in relation to main page
+so that it knows which Json key to populate new page with, or go back to main page if clicked on main button.
+maybe all basic responses share a class with back buttons to link to home page??
+
+
 sterile wipe, then radiation blast!
 
 conductive fabric pads;

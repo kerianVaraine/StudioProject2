@@ -18,7 +18,9 @@ div {
     min-height: 100%;
 }
 
-.mainContent{
+
+
+#SPAContainer {
     grid-area: mainContent;
     /* nested grid for content */
     display:grid;
@@ -59,7 +61,7 @@ div {
 }
 
 .phrases {
-    grid-area: mainContent;
+    grid-area: mainCategories;
     display:grid;
     grid-template-columns: repeat(4, 1fr);
 }
