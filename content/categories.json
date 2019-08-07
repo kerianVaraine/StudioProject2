@@ -35,5 +35,29 @@
        ["Cold", "I am cold"],
        ["Hot", "I am hot"],
        ["Can't sleep", "I am struggling to sleep"]
+   ],
+   "Emotional" :[
+
+   ],
+   "Move" :[
+
+   ],
+   "Room Changes" :[
+
+   ],
+   "Personal" :[
+
+   ],
+   "Medical" : [
+
+   ],
+   "I would like to ask you..." : [
+
+   ],
+   "I would like you to ask me..." :[
+
+   ],
+   "Could you please find out..." : [
+
    ]
 }

@@ -31,7 +31,11 @@ let getButtonText = function (pCat, index) {
         subCategory = pCat[index][0];//set subCategory global variable to populate the right buttons.
         removeEntries(); //remove buttons once clicked
         
-        // console.log(pCat[index][0]);
+        console.log(pCat[index][0]);
+        //change page via switch statement, perhaps in new function?
+        //pass subcategory as param to set new page content?
+        //chained switch statement?
+        getNextPage(pCat[index][0]);
 
 
     };
@@ -80,7 +84,7 @@ let populateButtons = function () {
 //parameter is button id, for checking if home page.
 
 const SPAContainer = document.getElementById("SPAContainer")
-let getPage = function (pageName) {
+let getPage = function (pageName, categoryID) {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -88,6 +92,7 @@ let getPage = function (pageName) {
                 this.responseText;
                 if(document.getElementById("subCategory")){
                 document.getElementById("subCategory").innerHTML = subCategory;
+                populateEntries(categoryID);
                 }
                 populateButtons();
         }
@@ -95,4 +100,24 @@ let getPage = function (pageName) {
     xhttp.open("GET", "./pages/" + pageName + ".html", true);
     //sets page var for getting sub category
     xhttp.send();
+}
+
+///////////////////////////////////////////
+// Returns id for buttons to populate page
+///////////////////////////////////////////
+// This selects the next page based on category's returned from selecting subCategories
+// Default returns to Main.html injected.
+///////////////////////////////////////////
+
+let getNextPage = function (categoryID) {
+    switch (categoryID) {
+        case("Physical") :
+        case("") :
+        getPage("phrases", categoryID);
+
+            break;
+        default:
+            getPage("main");
+
+    }
 }
