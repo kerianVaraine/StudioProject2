@@ -6,4 +6,29 @@
 header {
     color: white;
     background-color: slategrey;
+    height: 10%;
+}
+
+#date {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    width: auto;
+    }
+
+#time {
+    color: greenyellow;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    width: auto;
+    
+}
+
+#here {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+   
+    
 }
