@@ -1,12 +1,22 @@
 /* Style button in entries */
-#entries button {
-    color:red;
+#entry, button {
+    /*color:red; */ 
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+     
+
 }
 
-header {
+/*#button:hover, button:focus {
+    border-color: currentColor;
+    background-color: white;
+}*/
+
+.header {
     color: white;
     background-color: slategrey;
-    height: 10%;
+    
 }
 
 #date {
@@ -15,21 +25,74 @@ header {
     font-weight: 600;
     width: 33%;
     padding-right: 100px;
-    }
+}
 
 #time {
     color: greenyellow;
-    font-size: 2em;
+    font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 1000;
     width: 33%;
 }
 
 #here {
-    font-size: 2em;
+    font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     float: right;
    
 }
 
+#basic {
+    background-color: blue;
+    border-width: 16px; 
+    border-color: blue;
+    
+}
+
+#basic:hover, #basic:focus {
+    background-color: white;
+}
+
+#am {
+    background-color: orange;
+    border-width: 16px; 
+    border-color: orange;
+    
+}
+
+#am:hover, #am:focus {
+    background-color: white;
+}
+
+#pain {
+    background-color: red;
+    border-width: 16px; 
+    border-color: red;
+    
+}
+
+#pain:hover, #pain:focus {
+    background-color: white;
+}
+
+#need {
+    background-color: yellow;
+    border-width: 16px; 
+    border-color: yellow; 
+}
+
+#need:hover, #need:focus {
+    background-color: white;
+}
+
+#conversation {
+    background-color: green;
+    border-width: 16px; 
+    border-color: green;
+    
+}
+
+#conversation:hover, #conversation:focus {
+    background-color: white;
+}
