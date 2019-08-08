@@ -4,8 +4,6 @@
     font-size: 2em;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
-     
-
 }
 
 /*#button:hover, button:focus {
@@ -96,3 +94,5 @@
 #conversation:hover, #conversation:focus {
     background-color: white;
 }
+
+/* border size type color --- do as one entry */
