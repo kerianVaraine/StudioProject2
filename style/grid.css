@@ -60,6 +60,12 @@ div {
 
 .phrases {
     grid-area: mainCategories;
+    /* Commented out in Prep for auto focus divs */
+    display:grid;
+    grid-template-rows: minmax(1fr);
+}
+/* for focus manipulation */
+.phraseDiv {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
 }

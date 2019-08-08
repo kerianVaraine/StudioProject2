@@ -7,7 +7,6 @@ let leftKey;
 let rightKey;
 let selectKey;
 
-
 // OLD
 // Phrase specific focus limiting
 // initially set to -1 (not focussable)
@@ -39,6 +38,7 @@ let togglePhraseFocus = function (selector) {
 let getChildren = function () {
         return document.activeElement.children;
 }
+
 //ALMOST get siblings of parent node
 let getSiblingsOfParent = function (childNodeArray) {
     let child = childNodeArray[0];
@@ -59,8 +59,6 @@ let toggleTabindex = function (elementArray) {
     }
 }
 
-
-
 //add all elements we want to include in our selection
 let getFocussableElements = function (focusContext) {
     //content == '.content' to keep focus on content
@@ -79,7 +77,6 @@ let getFocussableElements = function (focusContext) {
     });
     focusIndex = focussable.indexOf(document.activeElement);
 }
-
 
 //function to move focus, called by shortcuts
 //@TODO restrict focus based on where in dom focus is; if select category, focus locks to content div.
