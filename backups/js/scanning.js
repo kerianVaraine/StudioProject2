@@ -16,11 +16,11 @@ let togglePhraseFocus = function (selector) {
     let phraseButtons;
     switch (selector) {
         case ('all'):
-            phraseButtons = Array.from(document.getElementsByClassName('phraseButton'));
+            phraseButtons = document.getElementsByClassName('phraseButton');
             activeDivs = [];
             break;
         case ('children'):
-            phraseButtons = Array.from(document.activeElement.children);
+            phraseButtons = document.activeElement.children;
             break;
     }
 
@@ -37,17 +37,13 @@ let togglePhraseFocus = function (selector) {
 }
 
 let getChildren = function () {
-    // childArray[0].focus;
-    return document.activeElement.children;
+        return document.activeElement.children;
 }
 //ALMOST get siblings of parent node
 let getSiblingsOfParent = function (childNodeArray) {
     let child = childNodeArray[0];
     let parentNode = childNodeArray[0].parentNode;
-
     var siblingsArray = document.getElementsByClassName('catRow');
-    // var element = childNodeArray[0].parentNode;
-    
     return siblingsArray;
 }
 
@@ -139,15 +135,15 @@ let assignShortcut = function () {
         } else if (event.key == selectKey) {
             // this.console.log("select Key pressed");
 
-            //IF SELECTING CATEGORY, so if active element == type div?
             let childArray = getChildren()
-
-            toggleTabindex(childArray);
-            childArray[0].focus();
-
-            toggleTabindex(getSiblingsOfParent(childArray));
-            this.document.activeElement.click();
-
+            //if children exist, then...
+            if(childArray.length > 0){
+                toggleTabindex(childArray);
+                childArray[0].focus();
+                toggleTabindex(getSiblingsOfParent(childArray));
+            }
+                //simulate click
+                this.document.activeElement.click();
         }
     }, true)
 }
