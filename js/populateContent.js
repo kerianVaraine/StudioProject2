@@ -4,11 +4,11 @@ let subCategory = "basic";
 
 //Text-to-Speech, browser based.
 let synth = window.speechSynthesis;
-//BUTTON POPULATION SCRIPTS
+
+//////////////////
+//Import from json
 //parse content from json file, then populate page with buttons from the selected section.
-// From:
-//https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
-//turn this into a function, where params are location to pull from.
+//////////////////
 let phrases;
 let contentLocation = "./content/categories.json";
 let request = new XMLHttpRequest();
@@ -25,15 +25,15 @@ let createButton = function (pCat, index, phraseDivIndex) {
     let button = document.createElement("button"); //create button element
     button.innerText = pCat[index][0]; //add button text from json file
     button.className = "entry"; //assign class/css/styling
-
+    button.tabIndex = -1;
     //BUTTON ON CLICK button.onclick
     button.onclick = function () {
         synth.speak(new SpeechSynthesisUtterance(pCat[index][1])); //speak phrase from json
         removeEntries(); //remove buttons once clicked
         subCategory = pCat[index][0]; //set subCategory global variable to populate the right buttons.
-        atMain ? getNextPage(this.innerText ) : getNextPage(); // if at main page, go to sub category, else go back to main page
+        atMain ? getNextPage(this.innerText) : getNextPage(); // if at main page, go to sub category, else go back to main page
     }
-    
+
     //check if at main page to populate subcats.
     if (atMain) {
         document.getElementById("entries").appendChild(button); //adds all butons to page.
@@ -51,7 +51,10 @@ let populateEntries = function (category) {
     for (let i = 0; i < pCat.length; i++) {
         if (!atMain && i % 4 == 0) {
             phraseDivIndex++;
-            document.getElementById("entries").innerHTML += "<div class=phraseDiv tabindex = 0 class = 'catRow'></div>";
+            const newContainer = document.createElement('div');
+            newContainer.classList.add('phraseDiv', 'catRow');
+            newContainer.tabIndex = 0;
+            document.getElementById("entries").appendChild(newContainer)
         }
         createButton(pCat, i, phraseDivIndex);
     }

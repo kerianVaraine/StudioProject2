@@ -139,7 +139,7 @@ let assignShortcut = function () {
         } else if (event.key == selectKey) {
             // this.console.log("select Key pressed");
 
-            //IF SELECTING CATEGORY, so if active element == type div?
+            //Focus Manipulation
             let childArray = getChildren()
 
             toggleTabindex(childArray);
@@ -147,7 +147,6 @@ let assignShortcut = function () {
 
             toggleTabindex(getSiblingsOfParent(childArray));
             this.document.activeElement.click();
-
         }
     }, true)
 }
