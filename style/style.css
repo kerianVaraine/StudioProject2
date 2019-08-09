@@ -1,4 +1,9 @@
 /* Style button in entries (2nd level) */
+
+div {
+    box-sizing: border-box;
+    padding: 0px;
+}
 .entry {
     /*color:red; */ 
     font-size: 1.5em;
@@ -8,7 +13,7 @@
 .entry:hover, .entry:focus {
      /*color:red; */ 
      border-color: purple; 
-     border-width: 8px;
+     /*border-width: 8px;*/
      
 
 }
@@ -52,7 +57,7 @@
     background-color: purple;
 
 }
-#basic {
+#basic2 {
     background-color: blue;
     border-width: 16px; 
     border-color: blue;
@@ -62,7 +67,7 @@
     
 }
 
-#basic:hover, #basic:focus {
+#basic2:hover, #basic2:focus {
     background-color: white;
 }
 

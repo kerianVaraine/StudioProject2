@@ -15,8 +15,8 @@ function clock() {
 }
 
 
-if (document.getElementById) {
-    window.onload = header.setup;
+//if (document.getElementById) {
+//    window.onload = header.setup;
     
    clock();
-}
+//}
