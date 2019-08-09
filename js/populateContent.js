@@ -58,7 +58,7 @@ let populateEntries = function (category) {
             newContainer.classList.add('phraseDiv', 'catRow');
             newContainer.tabIndex = 0;
             newContainer.id = "phraseDiv" + phraseDivIndex;
-            document.getElementById("entries").appendChild(newContainer)
+            document.getElementById("entries").appendChild(newContainer);
         }
         createButton(pCat, i, phraseDivIndex);
     }
@@ -72,24 +72,19 @@ function removeEntries() {
     }
 }
 
-///Page specific, using ids of section buttons to create phrase buttons
+//MAIN PAGE BUTTONS SETUP
 let populateButtons = function () {
-    let secButtArr;
+    let sectionButtons;
     //create array of section buttons (ie: top nav)
     if (atMain) {
-        secButtArr = document.getElementsByClassName("section");
+        sectionButtons = document.getElementsByClassName("section");
 
-        //apply onclick funtion to each button
-        for (let i = 0; i < secButtArr.length; i++) {
-            secButtArr[i].onfocus = function () {
+        //apply onFocus and onClick funtion to each button
+        for (let i = 0; i < sectionButtons.length; i++) {
+            sectionButtons[i].onfocus = function () {
                 removeEntries();
-                populateEntries(secButtArr[i].id);
+                populateEntries(sectionButtons[i].id);
             };
-            secButtArr[i].onclick = function () {
-                // console.log("clicked " + secButtArr[i].id);
-                document.getElementsByClassName("entry")[0].focus(); //focus on first phrase button
-
-            }
         }
     }
 }
@@ -111,10 +106,14 @@ let getPage = function (pageName, categoryID) {
                 populateEntries(categoryID);
             }
             populateButtons();
+            if(atMain){
+                document.getElementById("basic").focus();
+            } else {
+                document.getElementsByClassName("phraseDiv")[0].focus();
+            }
         }
     };
     xhttp.open("GET", "./pages/" + pageName + ".html", true);
-    //sets page var for getting sub category
     xhttp.send();
 }
 
@@ -123,7 +122,6 @@ let getPage = function (pageName, categoryID) {
 ///////////////////////////////////////////
 // This selects the next page based on category's returned from selecting subCategories
 // Default returns to Main.html injected.
-// Could be refactored to only work with catagor
 ///////////////////////////////////////////
 
 let getNextPage = function (categoryID) {
