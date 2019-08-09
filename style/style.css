@@ -1,3 +1,6 @@
+div, button {
+    box-sizing: border-box;
+}
 /* Style button in entries */
 #entries button {
     color:red;

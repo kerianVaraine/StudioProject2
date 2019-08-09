@@ -17,7 +17,6 @@ let togglePhraseFocus = function (selector) {
     switch (selector) {
         case ('all'):
             phraseButtons = Array.from(document.getElementsByClassName('phraseButton'));
-            activeDivs = [];
             break;
         case ('children'):
             phraseButtons = Array.from(document.activeElement.children);
@@ -37,17 +36,14 @@ let togglePhraseFocus = function (selector) {
 }
 
 let getChildren = function () {
-    // childArray[0].focus;
     return document.activeElement.children;
 }
+
 //ALMOST get siblings of parent node
 let getSiblingsOfParent = function (childNodeArray) {
     let child = childNodeArray[0];
     let parentNode = childNodeArray[0].parentNode;
-
     var siblingsArray = document.getElementsByClassName('catRow');
-    // var element = childNodeArray[0].parentNode;
-    
     return siblingsArray;
 }
 
@@ -62,8 +58,6 @@ let toggleTabindex = function (elementArray) {
         elementArray[i].setAttribute('tabindex', tabindexState);
     }
 }
-
-
 
 //add all elements we want to include in our selection
 let getFocussableElements = function (focusContext) {
@@ -84,11 +78,10 @@ let getFocussableElements = function (focusContext) {
     focusIndex = focussable.indexOf(document.activeElement);
 }
 
-
 //function to move focus, called by shortcuts
 //@TODO restrict focus based on where in dom focus is; if select category, focus locks to content div.
 let focusElement = function (direction) {
-    getFocussableElements('all');
+    // getFocussableElements('all');
     // getFocussableElements('catRow');
     // getFocussableElements('category');
     // getFocussableElements('content');
@@ -139,13 +132,19 @@ let assignShortcut = function () {
         } else if (event.key == selectKey) {
             // this.console.log("select Key pressed");
 
-            //Focus Manipulation
-            let childArray = getChildren()
+            //Focus Manipulation from testing page.
+            ///////
+            // let childArray = getChildren()
+            // toggleTabindex(childArray);
+            // childArray[0].focus();
+            // toggleTabindex(getSiblingsOfParent(childArray));
+            ///////
 
-            toggleTabindex(childArray);
-            childArray[0].focus();
+            //Manage Focus here//
+            //get id of selection, then send param to get focussable, shift the focus.
+            //check if atMain?
 
-            toggleTabindex(getSiblingsOfParent(childArray));
+
             this.document.activeElement.click();
         }
     }, true)

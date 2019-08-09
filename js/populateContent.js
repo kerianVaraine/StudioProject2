@@ -26,6 +26,9 @@ let createButton = function (pCat, index, phraseDivIndex) {
     button.innerText = pCat[index][0]; //add button text from json file
     button.className = "entry"; //assign class/css/styling
     button.tabIndex = -1;
+    
+    // On focus needs to preview phrases in phrases page. TODO
+    // button.onfocus;
     //BUTTON ON CLICK button.onclick
     button.onclick = function () {
         synth.speak(new SpeechSynthesisUtterance(pCat[index][1])); //speak phrase from json
@@ -54,6 +57,7 @@ let populateEntries = function (category) {
             const newContainer = document.createElement('div');
             newContainer.classList.add('phraseDiv', 'catRow');
             newContainer.tabIndex = 0;
+            newContainer.id = "phraseDiv" + phraseDivIndex;
             document.getElementById("entries").appendChild(newContainer)
         }
         createButton(pCat, i, phraseDivIndex);
