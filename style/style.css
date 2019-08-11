@@ -13,7 +13,7 @@ div {
 .entry:hover, .entry:focus {
      /*color:red; */ 
      border-color: purple; 
-     /*border-width: 8px;*/
+     border-width: 8px;
      
 
 }
@@ -58,7 +58,7 @@ div {
     background-color: purple;
 
 }
-#basic2 {
+#basic {
     background-color: blue;
     border-width: 16px; 
     border-color: blue;
@@ -68,7 +68,7 @@ div {
     
 }
 
-#basic2:hover, #basic2:focus {
+#basic:hover, #basic:focus {
     background-color: white;
 }
 
