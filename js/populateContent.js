@@ -85,7 +85,7 @@ for (let i = 0; i < secButtArr.length; i++) {
     secButtArr[i].onclick = function () {
         removeEntries();
         populateEntries(secButtArr[i].id);
-        document.getElementsByClassName("entry")[0].focus(); //focus on first phrase button
+        document.getElementsByClassName("entry")[0].focus(); //focus on basic phrase button
     }
 }
 
