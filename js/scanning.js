@@ -24,7 +24,7 @@ let togglePhraseFocus = function (selector) {
     }
 
     let tabindexState;
-    //checks first button's tab index attribute, for toggle setting//
+    //checks basic button's tab index attribute, for toggle setting//
     if (phraseButtons[0].getAttribute('tabindex') == -1) {
         tabindexState = 0;
     } else {

@@ -74,9 +74,9 @@
         ["Return to Main",""]
    ],
    "Personal" :[
-        ["Glasses","I need me glasses please"],
+        ["Glasses","I need my glasses please"],
         ["Wash","I would like to have a wash please"],
-        ["Hair","I would like my hair burshed please"],
+        ["Hair","I would like my hair brushed please"],
         ["Sit up","I would like sit up please"],
         ["Lip balm","I would like some lip balm please"],
         ["Return to Main",""]
@@ -94,7 +94,7 @@
         ["Stay","Can you please stay"],
         ["Leave","I sorry but can you please leave now"],
         ["Love you?","I love you"],
-        ["it will be OK","It's all going to be OK"],
+        ["It will be OK","It's all going to be OK"],
         ["Return to Main",""]
    ],
    "I would like you to ask me..." :[
@@ -103,7 +103,7 @@
    "Could you please find out..." : [  
         ["About my Condition","Please tell me more about my condition"],
         ["Why am I here?","Can you please remind me why I am here"],
-        ["My house?","Has someone checked the house"],
+        ["My home?","Has someone checked my home"],
         ["My pets?","Is someone looking after my pets"],
         ["My bills?","Has someone paid my bills"],
         ["Return to Main",""]   

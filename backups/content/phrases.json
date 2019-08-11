@@ -1,28 +1,111 @@
 {
-    "common": [
+    "basic": [
         ["Yes", "Yes"],
         ["No", "No"],
+        ["Stop!", "Stop!"],
+        ["Explain", "Could you please explain that to me again?"],
+        ["Thank you", "Thank you."],
         ["Please repeat", "could you please say that again?"],
-        ["Hello", "Hello"]
+        ["Return to Main",""]
     ],
-    "comfort": [
-        ["Itchy nose", "I have an itchy nose, please scratch it!"],
-        ["Lip Balm", "I would like some lip Balm"],
-        ["Position", "I am uncofortable, can I change position please?"],
-        ["Cold", "I am feeling cold, could I get more warmth please?"] ,
-        ["Hot", "I am feeling too hot, please make it colder in here?"]
+   "am" :[
+       ["Physical", ""],
+       ["Emotional", ""],
+       ["Return to Main",""]
+   ],
+   "pain": [
+    ["General", "I am in general pain."],
+    ["Select", ""],
+    ["Return to Main",""]   
+   ],
+   "need":[
+       ["Move", ""],
+       ["Room Changes", ""],
+       ["Personal", ""],
+       ["Medical", ""],
+       ["Return to Main",""]
+   ],
+   "conversation":[
+       ["I would like to ask you...", ""],
+       ["I would like you to ask me...", ""],
+       ["Could you please find out...", ""],
+       ["Return to Main",""]
+   ],
+   "Physical" :[
+       ["Nauseous", "I feel Nauseous"],
+       ["Dizzy", "I am feeling Dizzy"],
+       ["Lightheaded", "I am feeling lightheaded"],
+       ["Breathless", "I am short of breath"],
+       ["Itchy", "I am itchy"],
+       ["Cold", "I am cold"],
+       ["Hot", "I am hot"],
+       ["Can't sleep", "I am struggling to sleep"],
+       ["Return to Main",""]
+   ],
+   "Emotional" :[
+        ["Sad","I am feeling sad"],
+        ["Happy","I am feeling happy"],
+        ["Tired","I am feeling tired"],
+        ["Lonely","I am lonely"],
+        ["Scared","I am scared"],
+        ["Hopeful","I am hopeful"],
+        ["Anxious","i am anxious"],
+        ["Frustrated","I am feeling frustrated"],
+        ["Return to Main",""]
+   ],
+   "Move" :[
+        ["Left","Please turn me to my left side"],
+        ["Right","Please turn me to my right side"],
+        ["Flat", "Can I lie flat please"],
+        ["Sit", "Can I sit up please"],
+        ["Return to Main",""]
+   ],
+   "Room Changes" :[
+        ["More Pillow","Can I have another pillow please"],
+        ["Less Pillow","Can you please take away a pillow"],
+        ["Lights on","Can you please turn on the lights"],
+        ["Lights off","Can you please turn off the lights"],
+        ["Curtains open","Can you please open on the curtains"],
+        ["Curtains closed","Can you please close on the curtains"],
+        ["Radio on","Can you please turn on the radio"],
+        ["Radio off","Can you please turn off the radio"],
+        ["TV on","Can you please turn on the TV"],
+        ["TV off","Can you please turn off the TV"],
+        ["Return to Main",""]
+   ],
+   "Personal" :[
+        ["Glasses","I need me glasses please"],
+        ["Wash","I would like to have a wash please"],
+        ["Hair","I would like my hair burshed please"],
+        ["Sit up","I would like sit up please"],
+        ["Lip balm","I would like some lip balm please"],
+        ["Return to Main",""]
+   ],
+   "Medical" : [
+        ["Spit","I need to spit"],
+        ["Cough","I need to cough"],
+        ["Suction","I need suction"],
+        ["Return to Main",""]
     ],
-    "feel" :[
-        ["Sad", "I feel really sad and need consoling."],
-        ["Confused", "I feel very confused, could you please explain to me what is going on?"],
-        ["Anxious", "I feel anxious and need reassurance."],
-        ["Angry", "I'm angry and I need to talk to somebody about it."],
-        ["Frustrated", "I am feeling frustrated because...(select next option maybe?)"]
+   "I would like to ask you..." : [
+        ["How are you?","How are you"],
+        ["Tell me about your day","Tell me about your day"],
+        ["Just talk","Can you please just talk to me"],
+        ["Stay","Can you please stay"],
+        ["Leave","I sorry but can you please leave now"],
+        ["Love you?","I love you"],
+        ["it will be OK","It's all going to be OK"],
+        ["Return to Main",""]
     ],
-    "entertainment" :[
-        ["Radio On", "Could you please turn the radio on?"],
-        ["Radio Off", "Could you turn the radio off please?"],
-        ["TV on", "Could you please turn the TV on?"],
-        ["TV off", "Could you please turn the TV off?"]
+   "I would like you to ask me..." :[
+        ["Return to Main",""]
+    ],
+   "Could you please find out..." : [  
+        ["About my Condition","Please tell me more about my condition"],
+        ["Why am I here?","Can you please remind me why I am here"],
+        ["My house?","Has someone checked the house"],
+        ["My pets?","Is someone looking after my pets"],
+        ["My bills?","Has someone paid my bills"],
+        ["Return to Main",""]   
     ]
 }

@@ -40,6 +40,7 @@ div {
     grid-area: mainCategories;
     display:grid;
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 50vh;
     margin: 5px 10px;
     grid-gap: 10px;
 
