@@ -85,6 +85,7 @@ div {
 }
 
 .mainHeaderText p {
+    margin-top: 0;
     font-size: 1.2em;
 }
 
