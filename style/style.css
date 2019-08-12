@@ -70,17 +70,18 @@ div {
 }
 
 .section {
-    
     background-color: slategray;
-
+    color: #F8F8F8;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
 }
+
 #basic {
     background-color:#2E8B57;
     border-width: 16px; 
     border-color: #2E8B57;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    
     
 }
 
@@ -91,11 +92,9 @@ div {
 
 #am {
     background-color: #765AB0;
-    border-width: 16px; 
+    border-width: 16px;  
     border-color: #765AB0;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    
 }
 
 #am:hover, #am:focus {
@@ -107,9 +106,6 @@ div {
     background-color: #BC2C33;
     border-width: 16px; 
     border-color: #BC2C33;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
     
 }
 
@@ -122,9 +118,7 @@ div {
     background-color: #0088A0;
     border-width: 16px; 
     border-color: #0088A0;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600; 
+    
 }
 
 #need:hover, #need:focus {
@@ -137,15 +131,10 @@ div {
     background-color: #C14B9C;
     border-width: 16px; 
     border-color: #C14B9C;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    
+       
 }
 
 #conversation:hover, #conversation:focus {
     background-color: #F8F8F8;
     color: #C14B9C;
 }
-
-/* border size type color --- do as one entry */
