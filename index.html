@@ -18,17 +18,18 @@
     <div id="root" class='mainContainer'>
         <header id="mainHead" class="header">
             <!-- Header content here: date time etc... -->
-            <span id="date"></span>
-            <span id="time"></span>
-            <span id="here">Dunedin Hospital</span>
-            
+            <div id="date"></div>
+            <div id="time"></div>
+            <div id="here"  onclick="assignShortcut()">Dunedin Hospital  </div>
         </header>
-     
-    <div id="" class="mainContent">
-        <!-- All things will go under here -->
-        <!-- Main Page Contents -->
-        <div id="mainHead" class="mainHeader">
-            MAIN HEADER TEXT
+        <div id="SPAContainer" class="">
+            <!-- All things will go under here -->
+            <!-- Main Page Contents -->
+            <!-- INIT MAIN PAGE CONTENT -->
+
+
+
+            <!-- end of mainContent Div -->
         </div>
         <div id="" class="mainCategories">
             <!-- buttons go here for main categories -->
@@ -52,9 +53,21 @@
         <!-- end of Root div -->
     </div>
     <!-- Script loading -->
+
+    <script src="./js/ally.min.js"></script>
     <script src="./js/populateContent.js"></script>
-     <!-- Script fo main header info - time, date, etc -->
-     <script src="./js/header.js"></script>
+    <script>getPage("main");</script>
+    <!-- <script>atPain = true</script> -->
+    <!-- <script>getPage("pain");</script> -->
+<!--  -->
+    <script src="./js/header.js"></script>
+    <script src="./js/scanning.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/pain.js"></script>
+
+    <!-- <script src="./js/pain.js"></script> -->
+    <!-- <script src="./js/hardwareScripts.js"></script> -->
+
 </body>
 
 </html>

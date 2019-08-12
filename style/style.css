@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+/* Header Style */
+header div {
+    background-color: slategrey;
+    width: auto%;
+    margin-left:5vw;
+}
+
+div, button {
+    box-sizing: border-box;
+}
+/* Style button in entries */
+
+
+div :focus{
+    box-sizing: border-box;
+    border: 2px solid pink;
+}
+
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
 /* Style button in entries (2nd level) */
 
 div {
@@ -7,10 +28,18 @@ div {
     color: #f8f8f8;
 }
 .entry {
+<<<<<<< HEAD
     /*color:red; */ 
     font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
+=======
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    background-color: slategray;
+    color: #F8F8F8;
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
 }
 
 .entry:hover, .entry:focus {
@@ -26,6 +55,7 @@ div {
 .header {
     color: #F8F8F8;
     background-color: slategrey;
+<<<<<<< HEAD
     
 }
 
@@ -35,80 +65,144 @@ div {
     font-weight: 600;
     width: 33%;
     padding-right: 100px;
+=======
+}
+    
+.phraseDiv:focus {
+        border-width: 8px;
+        border-color: purple;
+}
+
+#date, #day {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;    
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
 }
 
 #time {
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 1000;
+<<<<<<< HEAD
     width: 33%;
+=======
+
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
 }
 
 #here {
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
+<<<<<<< HEAD
     float: right;
+=======
+    /* float: right; */
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
    
 }
 
 .section {
+<<<<<<< HEAD
     
     background-color: purple;
 
 }
+=======
+    background-color: slategray;
+    color: #F8F8F8;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
 #basic {
     background-color:#2E8B57;
     border-width: 16px; 
     border-color: #2E8B57;
+<<<<<<< HEAD
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
+=======
+    
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
     
 }
 
 #basic:hover, #basic:focus {
     background-color: #F8F8F8;
+<<<<<<< HEAD
+=======
+    color: #2E8B57;
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
 }
 
 #am {
     background-color: #765AB0;
+<<<<<<< HEAD
     border-width: 16px; 
     border-color: #765AB0;
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
+=======
+    border-width: 16px;  
+    border-color: #765AB0;
+    
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
 }
 
 #am:hover, #am:focus {
     background-color: #F8F8F8;
+<<<<<<< HEAD
+=======
+    color: #765AB0;
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
 }
 
 #pain {
     background-color: #BC2C33;
     border-width: 16px; 
     border-color: #BC2C33;
+<<<<<<< HEAD
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
+=======
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
     
 }
 
 #pain:hover, #pain:focus {
     background-color: #F8F8F8;
+<<<<<<< HEAD
+=======
+    color: #BC2C33;
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
 }
 
 #need {
     background-color: #0088A0;
     border-width: 16px; 
     border-color: #0088A0;
+<<<<<<< HEAD
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600; 
+=======
+    
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
 }
 
 #need:hover, #need:focus {
     background-color: #F8F8F8;
+<<<<<<< HEAD
+=======
+    color: #0088A0;
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
 }
 
 #conversation {
@@ -116,14 +210,23 @@ div {
     background-color: #C14B9C;
     border-width: 16px; 
     border-color: #C14B9C;
+<<<<<<< HEAD
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     
+=======
+       
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b
 }
 
 #conversation:hover, #conversation:focus {
     background-color: #F8F8F8;
+<<<<<<< HEAD
 }
 
 /* border size type color --- do as one entry */
+=======
+    color: #C14B9C;
+}
+>>>>>>> f3daf1e4e01c6d34bcd124514658aebc4013d28b

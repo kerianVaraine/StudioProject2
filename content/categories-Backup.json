@@ -1,0 +1,63 @@
+{
+    "basic": [
+        ["Yes", "Yes"],
+        ["No", "No"],
+        ["Stop!", "Stop!"],
+        ["Explain", "Could you please explain that to me again?"],
+        ["Thank you", "Thank you."],
+        ["Please repeat", "could you please say that again?"]
+    ],
+   "am" :[
+       ["Physical", ""],
+       ["Emotional", ""]
+   ],
+   "pain": [
+    ["General", "I am in general pain."],
+    ["Select", ""]   
+   ],
+   "need":[
+       ["Move", ""],
+       ["Room Changes", ""],
+       ["Personal", ""],
+       ["Medical", ""]
+   ],
+   "conversation":[
+       ["I would like to ask you...", ""],
+       ["I would like you to ask me...", ""],
+       ["Could you please find out...", ""]
+   ],
+   "Physical" :[
+       ["Nauseous", "I feel Nauseous"],
+       ["Dizzy", "I am feeling Dizzy"],
+       ["Lightheaded", "I am feeling lightheaded"],
+       ["Breathless", "I am short of breath"],
+       ["Itchy", "I am itchy"],
+       ["Cold", "I am cold"],
+       ["Hot", "I am hot"],
+       ["Can't sleep", "I am struggling to sleep"]
+   ],
+   "Emotional" :[
+
+   ],
+   "Move" :[
+
+   ],
+   "Room Changes" :[
+
+   ],
+   "Personal" :[
+
+   ],
+   "Medical" : [
+
+   ],
+   "I would like to ask you..." : [
+
+   ],
+   "I would like you to ask me..." :[
+
+   ],
+   "Could you please find out..." : [
+
+   ]
+}

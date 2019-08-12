@@ -16,9 +16,9 @@ let selectKey;
 
 //add all elements we want to include in our selection
 let getFocussableElements = function (focusContext) {
-    //content == '.content' to keep focus on content
-    //category == '.category' to keep focus on categories
-    //all '.within-filter-selector' for all
+    // content == '.content' to keep focus on content
+    // category == '.category' to keep focus on categories
+    // all '.within-filter-selector' for all
     let focus;
     if(focusContext == 'all'){
         focus = '.within-filter-selector';
@@ -100,18 +100,9 @@ let resetShortcuts = function () {
     rightKey = setUndefined();
     selectKey = setUndefined();
 }
-//
+
 
 //scanning mode test. some issues. needs to be reset when select is pressed, and needs to stay in div scope for tabbables
 // let scanningMode = setInterval(function () {
 //             focusElement("next");
 //         }, 800);
-
-
-// refactor phils code to speak the phrases needed.
-// populate the html with an array of sentences stored in a seperate file.
-// making it easier for others to edit and add new phrases.
-
-
-
-//Back button selects top level heirachy "section" parent....
