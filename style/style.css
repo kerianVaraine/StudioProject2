@@ -1,3 +1,10 @@
+/* Header Style */
+header div {
+    background-color: slategrey;
+    width: auto%;
+    margin-left:5vw;
+}
+
 div, button {
     box-sizing: border-box;
 }
@@ -48,24 +55,21 @@ div {
 #date, #day {
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    width: 33%;
-    
+    font-weight: 600;    
 }
 
 #time {
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 1000;
-    width: 33%;
-    padding-left: 150px;
+
 }
 
 #here {
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    float: right;
+    /* float: right; */
    
 }
 

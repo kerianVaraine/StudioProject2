@@ -3,7 +3,7 @@
 .mainContainer {
     height: 100vh;
     display:grid;
-    grid-template-rows: 10% 1fr;
+    grid-template-rows: 15vh 1fr;
     grid-template-areas:
         "header"
         "mainContent"
@@ -12,6 +12,11 @@
 .header{
     grid-area: header;
     min-height: 100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 10vw;
+    grid-template-rows: 100%;
+    justify-items: center;
+    align-items: center;
 }
 
 #SPAContainer {
