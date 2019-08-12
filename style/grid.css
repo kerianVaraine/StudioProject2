@@ -1,7 +1,4 @@
-/* Temporary to see grid outlines better */
-div {
-    border: 1px solid black;
-}
+
 /* Main Grid Declarations */
 
 .mainContainer {
@@ -75,15 +72,49 @@ div {
 /*Pain Page grid*/
 
 .pain {
-    grid-area: 
-    mainCategories, subcategories, exampleText;
-
+    grid-area: mainCategories;
+/* grid-row-start: 1; */
     display: grid;
-    grid-auto-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas:
         "body options"
 }
 
 .body {
     grid-area: body;
+
+}
+.body .img {
+    height: 1fr;
+}
+
+
+
+/* Pain scan animations */
+.preloader-scan {
+    left: 0;
+    right: 0;
+    /* max-width: %; */
+    display: table;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+}
+    
+.laser {
+    width: 100%;
+    margin-left: -25%;
+    background-color: red;
+    height: 5px;
+    position: absolute;
+    top: 40%;
+    z-index: 2;
+    box-shadow: 0 0 4px red;
+    /* animation: scanning 2s infinite; */
+  }
+
+@keyframes scanning {
+  50% {
+    transform: translateY(100%);
+  }
 }

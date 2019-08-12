@@ -96,6 +96,7 @@ let populateButtons = function () {
 //parameter is button id, for checking if home page.
 
 const SPAContainer = document.getElementById("SPAContainer")
+
 let getPage = function (pageName, categoryID) {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -107,6 +108,7 @@ let getPage = function (pageName, categoryID) {
                 populateEntries(categoryID);
             }
             populateButtons();
+            //INITIAL FOCUS SETTING
             if(atMain){
                 document.getElementById("basic").focus();
             } else if(!atPain){
