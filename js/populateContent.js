@@ -28,8 +28,6 @@ let createButton = function (pCat, index, phraseDivIndex) {
     button.className = "entry"; //assign class/css/styling
     button.tabIndex = -1;
     
-    // On focus needs to preview phrases in phrases page. TODO
-    // button.onfocus;
     //BUTTON ON CLICK button.onclick
     button.onclick = function () {
         synth.speak(new SpeechSynthesisUtterance(pCat[index][1])); //speak phrase from json
@@ -46,8 +44,24 @@ let createButton = function (pCat, index, phraseDivIndex) {
     }
 }
 
+let createBackButton = function(phraseDivIndex) {
+    let button = document.createElement("button"); //create button element
+    button.innerText = "Back to main"; //add button text from json file
+    button.className = "entry"; //assign class/css/styling
+    button.tabIndex = -1;
+    
+    //BUTTON ON CLICK button.onclick
+    button.onclick = function () {
+        removeEntries(); //remove buttons once clicked
+        getNextPage(); // if at main page, go to sub category, else go back to main page
+    }
+    //check if at main page to populate subcats.
+        document.getElementsByClassName("phraseDiv")[phraseDivIndex].appendChild(button); //adds buttons in phrase pages to newly created div for focus management.
+}
+
 // populates the content div with buttons and stores the speech synth inside the button
 let populateEntries = function (category) {
+    let buttonNumber = 0;
     let phraseDivIndex = -1;
     // this selects the category inside the json file to loop through and populate buttons
     let pCat = phrases[category];
@@ -60,8 +74,18 @@ let populateEntries = function (category) {
             newContainer.tabIndex = 0;
             newContainer.id = "phraseDiv" + phraseDivIndex;
             document.getElementById("entries").appendChild(newContainer);
-        }
-        createButton(pCat, i, phraseDivIndex);
+        }        
+        // if(!atMain && buttonNumber < 4){
+        // createButton(pCat, i, phraseDivIndex);
+        // buttonNumber++;
+        // } else if (!atMain){
+        //     createBackButton(phraseDivIndex);
+        //     buttonNumber =0;
+        // } else{
+        //     createButton(pCat, i, phraseDivIndex);
+        // }
+                    createButton(pCat, i, phraseDivIndex);
+
     }
 }
 
