@@ -96,6 +96,7 @@ let populateButtons = function () {
 //parameter is button id, for checking if home page.
 
 const SPAContainer = document.getElementById("SPAContainer")
+
 let getPage = function (pageName, categoryID) {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -107,10 +108,13 @@ let getPage = function (pageName, categoryID) {
                 populateEntries(categoryID);
             }
             populateButtons();
+            //INITIAL FOCUS SETTING
             if(atMain){
                 document.getElementById("basic").focus();
             } else if(!atPain){
                 document.getElementsByClassName("phraseDiv")[0].focus();
+            } else if(atPain){
+                document.getElementById("body").focus();
             }
         }
     };
@@ -138,6 +142,11 @@ let getNextPage = function (categoryID) {
         case ("Could you please find out..."):
             getPage("phrases", categoryID);
             atMain = false;
+            break;
+        case ("Select"):
+            atMain = false;
+            atPain = true;
+            getPage("pain");
             break;
         default:
             atMain = true;
