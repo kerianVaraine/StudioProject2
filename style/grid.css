@@ -3,7 +3,7 @@
 .mainContainer {
     height: 100vh;
     display:grid;
-    grid-template-rows: 15vh 1fr;
+    grid-template-rows: 10vh 1fr;
     grid-template-areas:
         "header"
         "mainContent"
@@ -35,6 +35,7 @@
 /* mainHeader */
 .mainHeader {
     grid-area: mainHeader;
+    max-height: 12vh;
 }
 
 .mainCategories {

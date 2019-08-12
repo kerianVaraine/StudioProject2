@@ -73,6 +73,13 @@ div {
    
 }
 
+/* TODO */
+/* MAIN HEADER STYLING */
+.mainHeaderText {
+    color: #200;
+    text-align: center;
+}
+
 .section {
     background-color: slategray;
     color: #F8F8F8;
