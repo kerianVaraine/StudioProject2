@@ -80,6 +80,14 @@ div {
     text-align: center;
 }
 
+.mainHeaderText h1{
+    padding:0;
+}
+
+.mainHeaderText p {
+    font-size: 2em;
+}
+
 .section {
     background-color: slategray;
     color: #F8F8F8;
