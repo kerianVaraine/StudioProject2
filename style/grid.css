@@ -74,3 +74,16 @@ div {
 
 /*Pain Page grid*/
 
+.pain {
+    grid-area: 
+    mainCategories, subcategories, exampleText;
+
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-template-areas:
+        "body options"
+}
+
+.body {
+    grid-area: body;
+}
