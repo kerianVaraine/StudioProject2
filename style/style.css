@@ -2,7 +2,7 @@
 header div {
     background-color: slategrey;
     width: auto;
-     margin-left: 5vw;
+    margin-left: 5vw;
 }
 
 div, button {
@@ -85,7 +85,7 @@ div {
 }
 
 .mainHeaderText p {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .section {
