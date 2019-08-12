@@ -9,7 +9,7 @@ let verticalLineMoved;
 
 let onPainPageLoad = function() {
     atPain = true;
-    sScanComplete = false;
+    isScanComplete = false;
     horizontalLine = document.getElementsByClassName("hr");
     horizontalLineMoved = false;
     verticalLine = document.getElementsByClassName("vr");
