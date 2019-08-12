@@ -2,9 +2,7 @@ div, button {
     box-sizing: border-box;
 }
 /* Style button in entries */
-#entries button {
-    color:red;
-}
+
 
 div :focus{
     box-sizing: border-box;
@@ -20,10 +18,11 @@ div {
     color: #f8f8f8;
 }
 .entry {
-    /*color:red; */ 
     font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
+    background-color: slategray;
+    color: #F8F8F8;
 }
 
 .entry:hover, .entry:focus {
@@ -46,12 +45,12 @@ div {
         border-color: purple;
 }
 
-#date {
+#date, #day {
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     width: 33%;
-    padding-right: 100px;
+    
 }
 
 #time {
@@ -59,6 +58,7 @@ div {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 1000;
     width: 33%;
+    padding-left: 150px;
 }
 
 #here {
@@ -70,62 +70,60 @@ div {
 }
 
 .section {
-    
-    background-color: purple;
-
+    background-color: slategray;
+    color: #F8F8F8;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
 }
+
 #basic {
     background-color:#2E8B57;
     border-width: 16px; 
     border-color: #2E8B57;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    
     
 }
 
 #basic:hover, #basic:focus {
     background-color: #F8F8F8;
+    color: #2E8B57;
 }
 
 #am {
     background-color: #765AB0;
-    border-width: 16px; 
+    border-width: 16px;  
     border-color: #765AB0;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    
 }
 
 #am:hover, #am:focus {
     background-color: #F8F8F8;
+    color: #765AB0;
 }
 
 #pain {
     background-color: #BC2C33;
     border-width: 16px; 
     border-color: #BC2C33;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
     
 }
 
 #pain:hover, #pain:focus {
     background-color: #F8F8F8;
+    color: #BC2C33;
 }
 
 #need {
     background-color: #0088A0;
     border-width: 16px; 
     border-color: #0088A0;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600; 
+    
 }
 
 #need:hover, #need:focus {
     background-color: #F8F8F8;
+    color: #0088A0;
 }
 
 #conversation {
@@ -133,14 +131,10 @@ div {
     background-color: #C14B9C;
     border-width: 16px; 
     border-color: #C14B9C;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    
+       
 }
 
 #conversation:hover, #conversation:focus {
     background-color: #F8F8F8;
+    color: #C14B9C;
 }
-
-/* border size type color --- do as one entry */

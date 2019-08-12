@@ -3,7 +3,7 @@
         ["Yes", "Yes"],
         ["No", "No"],
         ["Stop!", "Stop!"],
-        ["Explain", "Could you please explain that to me again?"],
+        ["Explain", "Could you please explain that again?"],
         ["Thank you", "Thank you."],
         ["Please repeat", "could you please say that again?"],
         ["Return to Main",""]
@@ -14,7 +14,7 @@
        ["Return to Main",""]
    ],
    "pain": [
-    ["General", "I am in general pain."],
+    ["General", "I am in pain."],
     ["Select", ""],
     ["Return to Main",""]   
    ],
@@ -27,13 +27,12 @@
    ],
    "conversation":[
        ["I would like to ask you...", ""],
-       ["I would like you to ask me...", ""],
        ["Could you please find out...", ""],
        ["Return to Main",""]
    ],
    "Physical" :[
-       ["Nauseous", "I feel Nauseous"],
-       ["Dizzy", "I am feeling Dizzy"],
+       ["Nauseous", "I feel nauseous"],
+       ["Dizzy", "I am feeling dizzy"],
        ["Lightheaded", "I am feeling lightheaded"],
        ["Breathless", "I am short of breath"],
        ["Itchy", "I am itchy"],
@@ -46,7 +45,7 @@
         ["Sad","I am feeling sad"],
         ["Happy","I am feeling happy"],
         ["Tired","I am feeling tired"],
-        ["Lonely","I am lonely"],
+        ["Lonely","I am feeling lonely"],
         ["Scared","I am scared"],
         ["Hopeful","I am hopeful"],
         ["Anxious","i am anxious"],
@@ -62,21 +61,21 @@
    ],
    "Room Changes" :[
         ["More Pillow","Can I have another pillow please"],
-        ["Less Pillow","Can you please take away a pillow"],
-        ["Lights on","Can you please turn on the lights"],
-        ["Lights off","Can you please turn off the lights"],
-        ["Curtains open","Can you please open on the curtains"],
-        ["Curtains closed","Can you please close on the curtains"],
-        ["Radio on","Can you please turn on the radio"],
-        ["Radio off","Can you please turn off the radio"],
-        ["TV on","Can you please turn on the TV"],
-        ["TV off","Can you please turn off the TV"],
+        ["Less Pillow","Please take a pillow away"],
+        ["Lights on","Please turn on the lights"],
+        ["Lights off","Please turn off the lights"],
+        ["Curtains open","Please open the curtains"],
+        ["Curtains closed","Please close the curtains"],
+        ["Radio on","Please turn on the radio"],
+        ["Radio off","Please turn off the radio"],
+        ["TV on","Please turn on the TV"],
+        ["TV off","Please turn off the TV"],
         ["Return to Main",""]
    ],
    "Personal" :[
-        ["Glasses","I need me glasses please"],
+        ["Glasses","I need my glasses please"],
         ["Wash","I would like to have a wash please"],
-        ["Hair","I would like my hair burshed please"],
+        ["Hair","I would like my hair brushed please"],
         ["Sit up","I would like sit up please"],
         ["Lip balm","I would like some lip balm please"],
         ["Return to Main",""]
@@ -97,9 +96,7 @@
         ["it will be OK","It's all going to be OK"],
         ["Return to Main",""]
    ],
-   "I would like you to ask me..." :[
-        ["Return to Main",""]
-   ],
+   
    "Could you please find out..." : [  
         ["About my Condition","Please tell me more about my condition"],
         ["Why am I here?","Can you please remind me why I am here"],
