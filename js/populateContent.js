@@ -113,6 +113,8 @@ let getPage = function (pageName, categoryID) {
                 document.getElementById("basic").focus();
             } else if(!atPain){
                 document.getElementsByClassName("phraseDiv")[0].focus();
+            } else if(atPain){
+                document.getElementById("body").focus();
             }
         }
     };
@@ -140,6 +142,11 @@ let getNextPage = function (categoryID) {
         case ("Could you please find out..."):
             getPage("phrases", categoryID);
             atMain = false;
+            break;
+        case ("Select"):
+            atMain = false;
+            atPain = true;
+            getPage("pain");
             break;
         default:
             atMain = true;

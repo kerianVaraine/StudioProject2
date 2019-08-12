@@ -2,13 +2,31 @@
     <h1 id="subCategory"></h1>
 </div>
 <div class="pain">
-    <div class="body">
-        <img src="./imgs/Human_body_silhouette.svg" class="img" alt="" srcset="">
+    <div id="body" class="body" tabindex="0">
+            <div id="hr" class="hr hidden"></div>
+            <div id="vr" class="vr hidden" ></div>
+            <img src="./imgs/Human_body_silhouette.svg" class="img body" alt="" srcset="">
     </div>
-    <div class="options">
+
+    <div id="options" class="options">
+        <h1 style="color: black">press select to start scanning for pain</h1>
+        <div>
+            <button id="reselectPain">Reselect area</button>
+            <button id="painButton">Pain</button>
+            <button id="discomfortButton">Discomfort</button>
+        </div>
+        <div>
+            <button>Ache/Dull</button>
+            <button>Sharp</button>
+            <button>Stining</button>
+        </div>
+        <div>
+            <button>1-4<br>Mild</button>
+            <button>5-6<br>Strong</button>
+            <button>7-8<br>Very strong</button>
+            <button>9-10<br>Excrutiating</button>
+        </div>
     </div>
-
-
 </div>
-
-</div>
+<script>            checkScan();
+    </script>

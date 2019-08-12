@@ -116,8 +116,8 @@ let assignShortcut = function () {
             //this.console.log("right Key pressed");
             focusElement("next");
         } else if (event.key == selectKey) {
-            ///////////////////////
-            // Manage Focus here //
+            //////////////////////////////
+            // Manage Focus here /////////
             //////////////////////////////
             //Main page focus management//
             if(this.document.activeElement.className == "section"){
@@ -125,8 +125,10 @@ let assignShortcut = function () {
                 document.getElementsByClassName("entry")[0].focus(); //focus on first phrase button
                 toggleTabindex(document.activeElement.parentElement.children);
             }else
-            //Phrase pages DIV focus management.
-            if(!atMain && this.document.activeElement.tagName != "BUTTON"){
+            /////////////////////////////////////
+            //Phrase pages DIV focus management//
+            /////////////////////////////////////
+            if(!atMain && !atPain && this.document.activeElement.tagName != "BUTTON"){
             //toggle children buttons
             let childArray = document.activeElement.children;
             let parentsArray = childArray[0].parentElement.parentElement.children;
@@ -134,8 +136,23 @@ let assignShortcut = function () {
             this.document.activeElement.click();
             childArray[0].focus();
             toggleTabindex(parentsArray);
-            } else {
+            } 
+            //////////////////////////////////
+            //PAIN PAGE///////////////////////
+            //////////////////////////////////
+            else if(atPain && !atMain){
+                if(!isScanComplete){
+                    if(!painPageLoad){
+                        onPainPageLoad();
+                        painPageLoad = true;
+                    }
+                    checkScan();
+                } else if(isScanComplete){
+                    optionSelecting();
+                }
+            } else{
                 this.document.activeElement.click();
+
             }
         }
     }, true)
