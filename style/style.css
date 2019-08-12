@@ -45,12 +45,12 @@ div {
         border-color: purple;
 }
 
-#date {
+#date, #day {
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     width: 33%;
-    padding-right: 100px;
+    
 }
 
 #time {
@@ -58,6 +58,7 @@ div {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 1000;
     width: 33%;
+    padding-left: 150px;
 }
 
 #here {
