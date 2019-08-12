@@ -3,7 +3,7 @@ let focusIndex;
 let focussable;
 
 // init vars to hold key values for configuration of keys/switches
-let leftKey;
+// let leftKey;
 let rightKey;
 let selectKey;
 
@@ -92,11 +92,6 @@ let assignShortcut = function () {
         if (event.defaultPrevented) {
             return; // Do nothing if the event was already processed //not implemented
         }
-        if (leftKey === undefined) {
-            leftKey = event.key;
-            this.console.log("left assigned to " + leftKey);
-            return;
-        }
         if (rightKey === undefined) {
             rightKey = event.key;
             this.console.log("right assigned to " + rightKey);
@@ -109,10 +104,7 @@ let assignShortcut = function () {
             return;
         }
         // Shortcut listener - once assigned
-        if (event.key == leftKey) {
-            //this.console.log("left Key pressed");
-            focusElement("prev");
-        } else if (event.key == rightKey) {
+        if (event.key == rightKey) {
             //this.console.log("right Key pressed");
             focusElement("next");
         } else if (event.key == selectKey) {
