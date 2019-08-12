@@ -39,7 +39,11 @@ div {
 .header {
     color: #F8F8F8;
     background-color: slategrey;
+}
     
+.phraseDiv:focus {
+        border-width: 8px;
+        border-color: purple;
 }
 
 #date {
