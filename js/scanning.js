@@ -105,7 +105,7 @@ let assignShortcut = function () {
         if (selectKey === undefined) {
             selectKey = event.key;
             this.console.log("select assigned to " + selectKey);
-            
+            this.document.getElementById("basic").focus();
             return;
         }
         // Shortcut listener - once assigned

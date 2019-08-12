@@ -1,6 +1,7 @@
 //Main vars for subcategory listing
 let atMain = true; //lets create button know if it is at main page for populating buttons
 let subCategory = "basic";
+let atPain = false;
 
 //Text-to-Speech, browser based.
 let synth = window.speechSynthesis;
@@ -39,9 +40,9 @@ let createButton = function (pCat, index, phraseDivIndex) {
 
     //check if at main page to populate subcats.
     if (atMain) {
-        document.getElementById("entries").appendChild(button); //adds all butons to page.
+        document.getElementById("entries").appendChild(button); //adds all butons to Main page.
     } else {
-        document.getElementsByClassName("phraseDiv")[phraseDivIndex].appendChild(button); //adds buttons to newly created div for focus management.
+        document.getElementsByClassName("phraseDiv")[phraseDivIndex].appendChild(button); //adds buttons in phrase pages to newly created div for focus management.
     }
 }
 
@@ -52,7 +53,7 @@ let populateEntries = function (category) {
     let pCat = phrases[category];
     //loop to populate page with json info, and main category name for page choice
     for (let i = 0; i < pCat.length; i++) {
-        if (!atMain && i % 4 == 0) {
+        if (!atMain && i % 5 == 0) {
             phraseDivIndex++;
             const newContainer = document.createElement('div');
             newContainer.classList.add('phraseDiv', 'catRow');
@@ -108,7 +109,7 @@ let getPage = function (pageName, categoryID) {
             populateButtons();
             if(atMain){
                 document.getElementById("basic").focus();
-            } else {
+            } else if(!atPain){
                 document.getElementsByClassName("phraseDiv")[0].focus();
             }
         }
