@@ -237,11 +237,11 @@ let getNextPage = function (categoryID) {
             getPage("phrases", categoryID);
             atMain = false;
             break;
-        case ("Select"):
-            atMain = false;
-            atPain = true;
-            getPage("pain");
-            break;
+        // case ("Select"):
+        //     atMain = false;
+        //     atPain = true;
+        //     getPage("pain");
+        //     break;
         default:
             atMain = true;
             getPage("main");
