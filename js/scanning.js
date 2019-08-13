@@ -1,4 +1,10 @@
-// ref to focusable elements array
+/**
+ * @fileoverview Manages keyboard emulation based switch control and focus manipulation throughout the site. <br><br>
+ * <b>Depends on ally.js library</b><br><br>
+ * <em>Event listener contains page specific logic and needs to be refactored. </em>
+ */
+
+/** ref to focusable elements array */
 let focusIndex;
 let focussable;
 
@@ -7,11 +13,12 @@ let focussable;
 let rightKey;
 let selectKey;
 
-
-// OLD
-// Phrase specific focus limiting
-// initially set to -1 (not focussable)
-//this should take an array of html nodes, makes it cleaner.
+/** Toggles focus on selected DOM Object with class phraseButton.<br>
+ * 
+ * @param {string} selector 
+ * 'all' -- effects all objects with class 'phraseButton'<br><br>
+ * 'children' -- effects children of selected node.
+ */
 let togglePhraseFocus = function (selector) {
     let phraseButtons;
     switch (selector) {
@@ -35,6 +42,10 @@ let togglePhraseFocus = function (selector) {
     }
 }
 
+/**Toggles tabindex attribute for target array of elements.<br>
+ *
+ * @param {element[]} elementArray
+ */
 let toggleTabindex = function (elementArray) {
     let tabindexState; //current state of tabIndex;
     for (let i = 0; i < elementArray.length; i++) {
@@ -47,7 +58,13 @@ let toggleTabindex = function (elementArray) {
     }
 }
 
-//add all elements we want to include in our selection
+/** Defines an array of elements which have a tabindex of 0.<br>
+ * Dependancy: ally.js.
+ *
+ * @param {string} focusContext
+ * 'all' -- selects all focusable object using ally.js definitions.<br><br>
+ * anything else -- passes the class to ally.js to check if focusable. 
+ */
 let getFocussableElements = function (focusContext) {
     //content == '.content' to keep focus on content class
     //category == '.category' to keep focus on categories class
@@ -66,8 +83,12 @@ let getFocussableElements = function (focusContext) {
     focusIndex = focussable.indexOf(document.activeElement);
 }
 
-//function to move focus, called by shortcuts
-//@TODO restrict focus based on where in dom focus is; if select category, focus locks to content div.
+/** Shift focus to next element in focussable[]
+ *
+ * @param {String} direction
+ * 'next' -- focus on next element in focussable[]<br><br>
+ * 'prev' -- focus on previous element in focussable[]
+ */
 let focusElement = function (direction) {
     getFocussableElements('all');
     let nextElement;
@@ -84,9 +105,9 @@ let focusElement = function (direction) {
     }
 }
 
-//Function to log keypresses and save them as vars defined at head, then keep listening for keypresses
-//@TODO refactor to loop, based on how many buttons available.
-//@TODO next pass, tidy and make make
+/** Initiates shortcut assignment for keyboard emulating switch based hardware and creates EventListener to handle switch commands.<br><br>
+* @todo <em>This is in no way elegant, and should be refactored into multiple functions based on current page.</em>
+*/
 let assignShortcut = function () {
     window.addEventListener("keydown", function (event) {
         if (event.defaultPrevented) {

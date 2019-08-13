@@ -1,77 +1,100 @@
-//Main vars for subcategory listing
-let atMain = true; //lets create button know if it is at main page for populating buttons
+/**
+ * @fileoverview Manages all dynamic DOM manipulations throughout page.<br><br>
+ * Creates all the buttons and loads phrases and button names from Content.JSON file.<br><br>
+ * Also keeps track of where in the page the user is via global variables.<br>
+ * <em>This needs to be highly refactored</em>
+ */
+
+//Main vars for page listings, and subCategory headers.
+let atMain = true;
 let subCategory = "basic";
 let atPain = false;
 
 //Text-to-Speech, browser based.
 let synth = window.speechSynthesis;
 
-//////////////////
-//Import from json
-//parse content from json file, then populate page with buttons from the selected section.
-//////////////////
+//Json contents
 let phrases;
-let contentLocation = "./content/categories.json";
-let request = new XMLHttpRequest();
-request.open('GET', contentLocation);
-request.responseType = 'json';
-request.send();
-request.onload = function () {
-    phrases = request.response;
+let contentLocation;
+
+
+/** Loads Content.json.<br><br>
+ * Contains all phrases, previews and spoken text.
+ *
+ */
+let importContent = function () {
+    contentLocation = "./content/categories.json";
+    let request = new XMLHttpRequest();
+    request.open('GET', contentLocation);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function () {
+        phrases = request.response;
+    }
 }
+
+//init loading of content.
+importContent();
 // end of json importing
 
-// adds buttons with all functionality and name
+/**Adds a button with name and spoken text from content.json. <br><br>
+ * Includes onclick and onfocus events, but these need to be abstracted out.
+ *
+ *
+ * @param {string} pCat Json category to get nested key:value pairs.
+ * @param {int} index Counter for Json subcategory key.
+ * @param {int} phraseDivIndex Counter for appending to dynamic div creation when in phrase page.
+ */
 let createButton = function (pCat, index, phraseDivIndex) {
     let button = document.createElement("button"); //create button element
     button.innerText = pCat[index][0]; //add button text from json file
     button.className = "entry"; //assign class/css/styling
     button.tabIndex = -1;
-    
+
     //Preview Function on focus
-    button.onfocus = function(){
+    button.onfocus = function () {
         let preview = document.getElementById("previewText");
-        if(atMain){
-            switch(button.innerText){
+        if (atMain) {
+            switch (button.innerText) {
                 case ("Physical"):
                     console.log("focus " + button.innerText)
-preview.innerText =  "For example: I am short of breath";
-break;
-                    case ("Emotional"):
-                            preview.innerText =  " For example: I am happy ";
-                            break;
-                    case ("Move"):
-                            preview.innerText =  "Change your position in bed";
-                            break;
-                    case ("Room Changes"):
-                            preview.innerText = "Adjust your room";
-                            break;
-                    case ("Personal"):
-                            preview.innerText = "For example: I need my glasses ";
-                            break;
-                    case ("Medical"):
-                            preview.innerText = "Requests concerning your medical condition";
-                            break;
-                    case ("I would like to ask you..."):
-                            preview.innerText = "General questions, such as \"How are You?\"";
-                            break;
-                    case ("I would like you to ask me..."):
-                            preview.innerText = "To initiate conversation";
-                            break;
-                    case ("Could you please find out..."):
-                            preview.innerText = "Requests relating to house/concerns/family";
-                            break;
-                    case ("Return to Main"):
-                            preview.innerText = "Return to main page"
-                            break;
-                    case ("General"):
-                        preview.innerText = "Communicate pain immediately";
-                        break;
-                        case ("Select") :
-                            preview.innerText = "Communicate pain/discomfort of a specific body part";
-                            break;
-                        default:
-                            preview.innerText = "";
+                    preview.innerText = "For example: I am short of breath";
+                    break;
+                case ("Emotional"):
+                    preview.innerText = " For example: I am happy ";
+                    break;
+                case ("Move"):
+                    preview.innerText = "Change your position in bed";
+                    break;
+                case ("Room Changes"):
+                    preview.innerText = "Adjust your room";
+                    break;
+                case ("Personal"):
+                    preview.innerText = "For example: I need my glasses ";
+                    break;
+                case ("Medical"):
+                    preview.innerText = "Requests concerning your medical condition";
+                    break;
+                case ("I would like to ask you..."):
+                    preview.innerText = "General questions, such as \"How are You?\"";
+                    break;
+                case ("I would like you to ask me..."):
+                    preview.innerText = "To initiate conversation";
+                    break;
+                case ("Could you please find out..."):
+                    preview.innerText = "Requests relating to house/concerns/family";
+                    break;
+                case ("Return to Main"):
+                    preview.innerText = "Return to main page"
+                    break;
+                case ("General"):
+                    preview.innerText = "Communicate pain immediately";
+                    break;
+                case ("Select"):
+                    preview.innerText = "Communicate pain/discomfort of a specific body part";
+                    break;
+                default:
+                    preview.innerText = "";
             }
         }
     }
@@ -93,6 +116,12 @@ break;
 }
 
 // populates the content div with buttons and stores the speech synth inside the button
+
+/** Takes care of populating the phrase pages in divs of 5 buttons each.
+ *
+ *
+ * @param {String} category Key for json file lookup.
+ */
 let populateEntries = function (category) {
     let phraseDivIndex = -1;
     // this selects the category inside the json file to loop through and populate buttons
@@ -106,13 +135,14 @@ let populateEntries = function (category) {
             newContainer.tabIndex = 0;
             newContainer.id = "phraseDiv" + phraseDivIndex;
             document.getElementById("entries").appendChild(newContainer);
-        }        
-                    createButton(pCat, i, phraseDivIndex);
-
+        }
+        createButton(pCat, i, phraseDivIndex);
     }
 }
 
 //remove buttons in entry div
+
+/**Remove buttons from main page categories*/
 function removeEntries() {
     let elements = document.getElementsByClassName("entry");
     while (elements.length > 0) {
@@ -121,6 +151,10 @@ function removeEntries() {
 }
 
 //MAIN PAGE BUTTONS SETUP
+
+/** Manages main page's dynamic subcategories.<br><br>
+ * This creates onFocus event for buttons to show the desired subcategories of content.json.
+ */
 let populateButtons = function () {
     let sectionButtons;
     //create array of section buttons (ie: top nav)
@@ -142,8 +176,15 @@ let populateButtons = function () {
 ////////////////////////////
 //parameter is button id, for checking if home page.
 
+//Main container level.
 const SPAContainer = document.getElementById("SPAContainer")
 
+/** Dynamically change content of SPAContainer. <br><br>
+ * Inits focus on new page loads.
+ *
+ * @param {String} pageName Name of the target page found in ./pages/
+ * @param {String} categoryID content.json category key.
+ */
 let getPage = function (pageName, categoryID) {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -156,11 +197,11 @@ let getPage = function (pageName, categoryID) {
             }
             populateButtons();
             //INITIAL FOCUS SETTING
-            if(atMain){
+            if (atMain) {
                 document.getElementById("basic").focus();
-            } else if(!atPain){
+            } else if (!atPain) {
                 document.getElementsByClassName("phraseDiv")[0].focus();
-            } else if(atPain){
+            } else if (atPain) {
                 document.getElementById("body").focus();
             }
         }
@@ -176,6 +217,13 @@ let getPage = function (pageName, categoryID) {
 // Default returns to Main.html injected.
 ///////////////////////////////////////////
 
+
+/**This selects the next page based on category's returned from selecting subCategories <br><br>
+ * Default returns to Main.html injected.<br><br>
+ *<em> This function also sets page location global variable.</em>
+ *
+ * @param {String} categoryID From clicked button ID to populate the next page.
+ */
 let getNextPage = function (categoryID) {
     switch (categoryID) {
         case ("Physical"):
