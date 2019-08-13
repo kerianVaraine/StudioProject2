@@ -62,21 +62,21 @@
    "Room Changes" :[
         ["More Pillow","Can I have another pillow please"],
         ["Less Pillow","Please take a pillow away"],
-        ["Lights on","Please turn on the lights"],
-        ["Lights off","Please turn off the lights"],
+        ["Lights on","Please turn the lights on"],
+        ["Lights off","Please turn the lights off"],
         ["Curtains open","Please open the curtains"],
         ["Curtains closed","Please close the curtains"],
-        ["Radio on","Please turn on the radio"],
-        ["Radio off","Please turn off the radio"],
-        ["TV on","Please turn on the TV"],
-        ["TV off","Please turn off the TV"],
+        ["Radio on","Please turn the radio on"],
+        ["Radio off","Please turn the radio off"],
+        ["TV on","Please turn the TV on"],
+        ["TV off","Please turn the TV off"],
         ["Return to Main",""]
    ],
    "Personal" :[
         ["Glasses","I need my glasses please"],
         ["Wash","I would like to have a wash please"],
         ["Hair","I would like my hair brushed please"],
-        ["Sit up","I would like sit up please"],
+        ["Sit up","I would like to sit up please"],
         ["Lip balm","I would like some lip balm please"],
         ["Return to Main",""]
    ],
