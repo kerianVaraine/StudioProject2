@@ -28,6 +28,54 @@ let createButton = function (pCat, index, phraseDivIndex) {
     button.className = "entry"; //assign class/css/styling
     button.tabIndex = -1;
     
+    //Preview Function on focus
+    button.onfocus = function(){
+        let preview = document.getElementById("previewText");
+        if(atMain){
+            switch(button.innerText){
+                case ("Physical"):
+                    console.log("focus " + button.innerText)
+preview.innerText =  "For example: I am short of breath";
+break;
+                    case ("Emotional"):
+                            preview.innerText =  " For example: I am happy ";
+                            break;
+                    case ("Move"):
+                            preview.innerText =  "Change your position in bed";
+                            break;
+                    case ("Room Changes"):
+                            preview.innerText = "Adjust your room";
+                            break;
+                    case ("Personal"):
+                            preview.innerText = "For example: I need my glasses ";
+                            break;
+                    case ("Medical"):
+                            preview.innerText = "Requests concerning your medical condition";
+                            break;
+                    case ("I would like to ask you..."):
+                            preview.innerText = "General questions, such as \"How are You?\"";
+                            break;
+                    case ("I would like you to ask me..."):
+                            preview.innerText = "To initiate conversation";
+                            break;
+                    case ("Could you please find out..."):
+                            preview.innerText = "Requests relating to house/concerns/family";
+                            break;
+                    case ("Return to Main"):
+                            preview.innerText = "Return to main page"
+                            break;
+                    case ("General"):
+                        preview.innerText = "Communicate pain immediately";
+                        break;
+                        case ("Select") :
+                            preview.innerText = "Communicate pain/discomfort of a specific body part";
+                            break;
+                        default:
+                            preview.innerText = "";
+            }
+        }
+    }
+
     //BUTTON ON CLICK button.onclick
     button.onclick = function () {
         synth.speak(new SpeechSynthesisUtterance(pCat[index][1])); //speak phrase from json
@@ -44,24 +92,8 @@ let createButton = function (pCat, index, phraseDivIndex) {
     }
 }
 
-let createBackButton = function(phraseDivIndex) {
-    let button = document.createElement("button"); //create button element
-    button.innerText = "Back to main"; //add button text from json file
-    button.className = "entry"; //assign class/css/styling
-    button.tabIndex = -1;
-    
-    //BUTTON ON CLICK button.onclick
-    button.onclick = function () {
-        removeEntries(); //remove buttons once clicked
-        getNextPage(); // if at main page, go to sub category, else go back to main page
-    }
-    //check if at main page to populate subcats.
-        document.getElementsByClassName("phraseDiv")[phraseDivIndex].appendChild(button); //adds buttons in phrase pages to newly created div for focus management.
-}
-
 // populates the content div with buttons and stores the speech synth inside the button
 let populateEntries = function (category) {
-    let buttonNumber = 0;
     let phraseDivIndex = -1;
     // this selects the category inside the json file to loop through and populate buttons
     let pCat = phrases[category];
@@ -75,15 +107,6 @@ let populateEntries = function (category) {
             newContainer.id = "phraseDiv" + phraseDivIndex;
             document.getElementById("entries").appendChild(newContainer);
         }        
-        // if(!atMain && buttonNumber < 4){
-        // createButton(pCat, i, phraseDivIndex);
-        // buttonNumber++;
-        // } else if (!atMain){
-        //     createBackButton(phraseDivIndex);
-        //     buttonNumber =0;
-        // } else{
-        //     createButton(pCat, i, phraseDivIndex);
-        // }
                     createButton(pCat, i, phraseDivIndex);
 
     }

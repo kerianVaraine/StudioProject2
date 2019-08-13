@@ -158,3 +158,9 @@ div {
     background-color: #F8F8F8;
     color: #C14B9C;
 }
+
+#previewText {
+    margin-left: 5vw;
+    font-size:2em;
+    color: #200;
+}

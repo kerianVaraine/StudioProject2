@@ -35,6 +35,7 @@
        ["Dizzy", "I am feeling dizzy"],
        ["Lightheaded", "I am feeling lightheaded"],
        ["Breathless", "I am short of breath"],
+       ["Return to Main",""],
        ["Itchy", "I am itchy"],
        ["Cold", "I am cold"],
        ["Hot", "I am hot"],
@@ -46,6 +47,7 @@
         ["Happy","I am feeling happy"],
         ["Tired","I am feeling tired"],
         ["Lonely","I am feeling lonely"],
+        ["Return to Main",""],
         ["Scared","I am scared"],
         ["Hopeful","I am hopeful"],
         ["Anxious","i am anxious"],
@@ -64,10 +66,12 @@
         ["Less Pillow","Please take a pillow away"],
         ["Lights on","Please turn on the lights"],
         ["Lights off","Please turn off the lights"],
+        ["Return to Main",""],
         ["Curtains open","Please open the curtains"],
         ["Curtains closed","Please close the curtains"],
         ["Radio on","Please turn on the radio"],
         ["Radio off","Please turn off the radio"],
+        ["Return to Main",""],
         ["TV on","Please turn on the TV"],
         ["TV off","Please turn off the TV"],
         ["Return to Main",""]
@@ -77,6 +81,7 @@
         ["Wash","I would like to have a wash please"],
         ["Hair","I would like my hair brushed please"],
         ["Sit up","I would like sit up please"],
+        ["Return to Main",""],
         ["Lip balm","I would like some lip balm please"],
         ["Return to Main",""]
    ],
@@ -91,6 +96,7 @@
         ["Tell me about your day","Tell me about your day"],
         ["Just talk","Can you please just talk to me"],
         ["Stay","Can you please stay"],
+        ["Return to Main",""],
         ["Leave","I sorry but can you please leave now"],
         ["Love you?","I love you"],
         ["it will be OK","It's all going to be OK"],
@@ -102,6 +108,7 @@
         ["Why am I here?","Can you please remind me why I am here"],
         ["My house?","Has someone checked the house"],
         ["My pets?","Is someone looking after my pets"],
+        ["Return to Main",""],
         ["My bills?","Has someone paid my bills"],
         ["Return to Main",""]   
    ]
