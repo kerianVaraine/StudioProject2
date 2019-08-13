@@ -5,7 +5,7 @@
         ["Stop!", "Stop!"],
         ["Explain", "Could you please explain that again?"],
         ["Thank you", "Thank you."],
-        ["Please repeat", "could you please say that again?"],
+        ["Please repeat", "Could you please say that again?"],
         ["Return to Main",""]
     ],
    "am" :[
@@ -50,7 +50,7 @@
         ["Return to Main",""],
         ["Scared","I am scared"],
         ["Hopeful","I am hopeful"],
-        ["Anxious","i am anxious"],
+        ["Anxious","I am anxious"],
         ["Frustrated","I am feeling frustrated"],
         ["Return to Main",""]
    ],
@@ -66,10 +66,12 @@
         ["Less Pillow","Please take a pillow away"],
         ["Lights on","Please turn the lights on"],
         ["Lights off","Please turn the lights off"],
+        ["Return to Main",""],
         ["Curtains open","Please open the curtains"],
         ["Curtains closed","Please close the curtains"],
         ["Radio on","Please turn the radio on"],
         ["Radio off","Please turn the radio off"],
+        ["Return to Main",""],
         ["TV on","Please turn the TV on"],
         ["TV off","Please turn the TV off"],
         ["Return to Main",""]
@@ -79,6 +81,7 @@
         ["Wash","I would like to have a wash please"],
         ["Hair","I would like my hair brushed please"],
         ["Sit up","I would like to sit up please"],
+        ["Return to Main",""],
         ["Lip balm","I would like some lip balm please"],
         ["Return to Main",""]
    ],

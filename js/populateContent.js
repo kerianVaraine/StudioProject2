@@ -54,48 +54,47 @@ let createButton = function (pCat, index, phraseDivIndex) {
     //Preview Function on focus
     button.onfocus = function () {
         let preview = document.getElementById("previewText");
-        if (atMain) {
-            switch (button.innerText) {
-                case ("Physical"):
-                    console.log("focus " + button.innerText)
-                    preview.innerText = "For example: I am short of breath";
-                    break;
-                case ("Emotional"):
-                    preview.innerText = " For example: I am happy ";
-                    break;
-                case ("Move"):
-                    preview.innerText = "Change your position in bed";
-                    break;
-                case ("Room Changes"):
-                    preview.innerText = "Adjust your room";
-                    break;
-                case ("Personal"):
-                    preview.innerText = "For example: I need my glasses ";
-                    break;
-                case ("Medical"):
-                    preview.innerText = "Requests concerning your medical condition";
-                    break;
-                case ("I would like to ask you..."):
-                    preview.innerText = "General questions, such as \"How are You?\"";
-                    break;
-                case ("I would like you to ask me..."):
-                    preview.innerText = "To initiate conversation";
-                    break;
-                case ("Could you please find out..."):
-                    preview.innerText = "Requests relating to house/concerns/family";
-                    break;
-                case ("Return to Main"):
-                    preview.innerText = "Return to main page"
-                    break;
-                case ("General"):
-                    preview.innerText = "Communicate pain immediately";
-                    break;
-                case ("Select"):
-                    preview.innerText = "Communicate pain/discomfort of a specific body part";
-                    break;
-                default:
-                    preview.innerText = "";
-            }
+        switch (button.innerText) {
+            case ("Physical"):
+                console.log("focus " + button.innerText)
+                preview.innerText = "For example: I am short of breath";
+                break;
+            case ("Emotional"):
+                preview.innerText = " For example: I am happy ";
+                break;
+            case ("Move"):
+                preview.innerText = "Change your position in bed";
+                break;
+            case ("Room Changes"):
+                preview.innerText = "Adjust your room";
+                break;
+            case ("Personal"):
+                preview.innerText = "For example: I need my glasses ";
+                break;
+            case ("Medical"):
+                preview.innerText = "Requests concerning your medical condition";
+                break;
+            case ("I would like to ask you..."):
+                preview.innerText = "General questions, such as \"How are You?\"";
+                break;
+            case ("I would like you to ask me..."):
+                preview.innerText = "To initiate conversation";
+                break;
+            case ("Could you please find out..."):
+                preview.innerText = "Requests relating to house/concerns/family";
+                break;
+            case ("Return to Main"):
+                preview.innerText = "Return to main page"
+                break;
+            case ("General"):
+                preview.innerText = "Communicate pain immediately";
+                break;
+            case ("Select"):
+                preview.innerText = "Communicate pain/discomfort of a specific body part";
+                break;
+            default:
+                preview.innerText = pCat[index][1];
+
         }
     }
 
