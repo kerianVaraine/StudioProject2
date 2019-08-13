@@ -16,8 +16,8 @@ div :focus{
     border: 2px solid pink;
 }
 
-/* Style button in entries (2nd level) */
-
+/* Style button in entries (2nd level) 
+    this includes div and entry */
 div {
     box-sizing: border-box;
     padding: 0px;
@@ -31,54 +31,47 @@ div {
     background-color: slategray;
     color: #F8F8F8;
 }
-
 .entry:hover, .entry:focus {
      border-color: purple; 
      border-width: 8px;
 }
 
-/*#button:hover, button:focus {
-    border-color: currentColor;
-    background-color: white;
-}*/
-
+/* styling for Header Bar
+    this includes day & date, time and location info */
 .header {
     color: #F8F8F8;
     background-color: slategrey;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
 }
     
+/* focus area for each row of 2nd level buttons
+    used to show which row of buttons is being focussed on  */
 .phraseDiv:focus {
         border-width: 8px;
         border-color: purple;
 }
 
-#date, #day {
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;    
-}
-
-#time {
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 1000;
-
-}
-
-#here {
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    /* float: right; */
-   
-}
 
 /* TODO */
 /* MAIN HEADER STYLING */
-.mainHeaderText {
+#mp {
     color: #200;
     text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+#details {
+    color: #200;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 .section {
     background-color: slategray;
