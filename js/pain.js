@@ -53,5 +53,8 @@ let optionSelecting = function(){
         resetPainPage();
             getPage("pain");
         break;
+        case("BTMain"):
+            getPage("main");
+            break;
             }
         }
