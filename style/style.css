@@ -36,7 +36,7 @@ div {
      border-width: 8px;
 }
 
-/* styling for Header Bar
+/* styling for Header Bar in index.html
     this includes day & date, time and location info */
 .header {
     color: #F8F8F8;
@@ -53,9 +53,9 @@ div {
         border-color: purple;
 }
 
-
-/* TODO */
-/* MAIN HEADER STYLING */
+/* Main header styling 
+    #mp & #details in main.html where main page title and navigation
+    info is shown*/
 #mp {
     color: #200;
     text-align: center;
@@ -63,7 +63,6 @@ div {
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 #details {
     color: #200;
     text-align: center;
@@ -72,72 +71,65 @@ div {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+/*.section - Class in main.html where main buttons are placed */ 
 .section {
-    background-color: slategray;
     color: #F8F8F8;
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
 }
 
+/* Basic Responses button */
 #basic {
     background-color:#2E8B57;
     border-width: 16px; 
     border-color: #2E8B57;
-    
-    
 }
-
 #basic:hover, #basic:focus {
     background-color: #F8F8F8;
     color: #2E8B57;
 }
 
+/* I Am button */
 #am {
     background-color: #765AB0;
     border-width: 16px;  
     border-color: #765AB0;
-    
 }
-
 #am:hover, #am:focus {
     background-color: #F8F8F8;
     color: #765AB0;
 }
 
+/* Pain button */
 #pain {
     background-color: #BC2C33;
     border-width: 16px; 
     border-color: #BC2C33;
-    
 }
-
 #pain:hover, #pain:focus {
     background-color: #F8F8F8;
     color: #BC2C33;
 }
 
+/* I Need button */
 #need {
     background-color: #0088A0;
     border-width: 16px; 
     border-color: #0088A0;
-    
 }
-
 #need:hover, #need:focus {
     background-color: #F8F8F8;
     color: #0088A0;
 }
 
+/* Conversation button */
 #conversation {
-    /* border: 16px, green; */
     background-color: #C14B9C;
     border-width: 16px; 
     border-color: #C14B9C;
        
 }
-
 #conversation:hover, #conversation:focus {
     background-color: #F8F8F8;
     color: #C14B9C;
