@@ -115,12 +115,12 @@ let assignShortcut = function () {
         }
         if (rightKey === undefined) {
             rightKey = event.key;
-            this.console.log("right assigned to " + rightKey);
+            // this.console.log("right assigned to " + rightKey);
             return;
         }
         if (selectKey === undefined) {
             selectKey = event.key;
-            this.console.log("select assigned to " + selectKey);
+            // this.console.log("select assigned to " + selectKey);
             this.document.getElementById("basic").focus();
             return;
         }
