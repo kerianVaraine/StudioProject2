@@ -42,12 +42,17 @@ div {
     this includes day & date, time and location info */
 .header {
     color: #F8F8F8;
-    background-color: slategrey;
+    background-color: #708090;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     line-height: font-size*1.5;
     word-spacing: font-size*.16;
+}
+
+#settings {
+    height:100%;
+    color: #456;    
 }
     
 /* focus area for each row of 2nd level buttons

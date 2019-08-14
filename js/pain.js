@@ -1,5 +1,5 @@
-/*On pain page load
-*/
+/** @fileoverview Logic and animation for pain page */
+
 let painPageLoad = false;
 let isScanComplete = false;
 let horizontalLine;
@@ -7,6 +7,7 @@ let horizontalLineMoved;
 let verticalLine;
 let verticalLineMoved;
 
+/** Setup scanning on page load*/
 let onPainPageLoad = function() {
     atPain = true;
     isScanComplete = false;
@@ -17,6 +18,9 @@ let onPainPageLoad = function() {
         painPageLoad = true;
 
 }
+
+
+/**Reset variables for page reload */
 let resetPainPage = function(){
     isScanComplete =false;
     painPageLoad = false;
@@ -24,6 +28,7 @@ let resetPainPage = function(){
     verticalLineMoved = false;
 }
 
+/** Logic for scanning, controls classes on scan lines and saves position until reset. */
 let checkScan = function() {
     if(!isScanComplete){
         if(!horizontalLineMoved && !verticalLineMoved){
@@ -44,6 +49,9 @@ let checkScan = function() {
     }
 }
 
+/**Called once scan is complete, controlls button functions <br><br>
+ * Uses active button ID to give next instructions.
+*/
 let optionSelecting = function(){
     let active = document.activeElement;
     let parentDiv = document.activeElement.parentElement;

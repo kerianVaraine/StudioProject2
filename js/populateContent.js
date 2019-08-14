@@ -173,11 +173,8 @@ let populateButtons = function () {
 ////////////////////////////
 //Page loading content stuff
 ////////////////////////////
-//parameter is button id, for checking if home page.
-
 //Main container level.
 const SPAContainer = document.getElementById("SPAContainer")
-
 /** Dynamically change content of SPAContainer. <br><br>
  * Inits focus on new page loads.
  *
@@ -208,15 +205,12 @@ let getPage = function (pageName, categoryID) {
     xhttp.open("GET", "./pages/" + pageName + ".html", true);
     xhttp.send();
 }
-
 ///////////////////////////////////////////
 // Returns id for buttons to populate page
 ///////////////////////////////////////////
 // This selects the next page based on category's returned from selecting subCategories
 // Default returns to Main.html injected.
 ///////////////////////////////////////////
-
-
 /**This selects the next page based on category's returned from selecting subCategories <br><br>
  * Default returns to Main.html injected.<br><br>
  *<em> This function also sets page location global variable.</em>
@@ -237,12 +231,12 @@ let getNextPage = function (categoryID) {
             getPage("phrases", categoryID);
             atMain = false;
             break;
-        // case ("Select"):
-        //     atMain = false;
-        //     atPain = true;
-        //     getPage("pain");
-        //     break;
-        
+        case ("Select"):
+            atMain = false;
+            atPain = true;
+            getPage("pain");
+            break;
+
         default:
             atMain = true;
             getPage("main");

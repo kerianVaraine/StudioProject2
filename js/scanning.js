@@ -170,3 +170,10 @@ let assignShortcut = function () {
         }
     }, true)
 }
+
+//scanning mode test. some issues. needs to be reset when select is pressed, and needs to stay in div scope for tabbables
+let scanningMode = function(){
+    setInterval(function () {
+            focusElement("next");
+        }, 800);
+    }
