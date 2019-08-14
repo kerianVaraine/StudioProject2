@@ -67,8 +67,7 @@ div {
     font-family: Arial, Helvetica, sans-serif;
     line-height: font-size*1.5;
     word-spacing: font-size*.16;
-    margin-left: 20px;
-}
+    }
 #details {
     color: #200;
     font-size: 1.25rem;
@@ -76,6 +75,7 @@ div {
     font-family: Arial, Helvetica, sans-serif;
     line-height: font-size*1.5;
     word-spacing: font-size*.16;
+    margin-left: 5vw;
 }
 
 .mainHeaderText h1{
