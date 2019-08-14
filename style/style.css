@@ -58,9 +58,8 @@ div {
 }
 
 /* Main header styling 
-    #mp & #details in main.html where main page title and navigation
-    info is shown*/
-#mp {
+    #mp & #details in main.html where page title and navigation info is shown*/
+#mp, #subCategory {
     color: #200;
     text-align: center;
     font-size: 2rem;
@@ -71,7 +70,6 @@ div {
 }
 #details {
     color: #200;
-    text-align: center;
     font-size: 1.25rem;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
