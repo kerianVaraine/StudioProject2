@@ -1,24 +1,26 @@
-// Shortcut assigning and key listening for focusable elements on page
-// @author kerian varaine
-// 
-// @TODO create standalone object for this, keep it nicer.
-//
-//
-// ref to focusable elements array
+/*Shortcut assigning and key listening for focusable elements on page.
+ * @author kerian varaine
+ * 
+ * @TODO create standalone object for this, keep it nicer.
+ *
+ *
+ * ref to focusable elements array
+*/
 let focusIndex;
 let focussable;
 
-// init vars to hold key values for configuration of keys/switches
+/* init vars to hold key values for configuration of keys/switches. */
 let leftKey;
 let rightKey;
 let selectKey;
 
 
-//add all elements we want to include in our selection
+/* add all elements we want to include in our selection. */
 let getFocussableElements = function (focusContext) {
-    // content == '.content' to keep focus on content
-    // category == '.category' to keep focus on categories
-    // all '.within-filter-selector' for all
+    /* content == '.content' to keep focus on content
+     * category == '.category' to keep focus on categories
+     * all '.within-filter-selector' for all
+     */
     let focus;
     if(focusContext == 'all'){
         focus = '.within-filter-selector';
@@ -33,13 +35,14 @@ let getFocussableElements = function (focusContext) {
     focusIndex = focussable.indexOf(document.activeElement);
 }
 
-//function to move focus, called by shortcuts
-//@TODO restrict focus based on where in dom focus is; if select category, focus locks to content div.
+/* function to move focus, called by shortcuts.
+ * @TODO restrict focus based on where in dom focus is; if select category, focus locks to content div.
+ */
 let focusElement = function (direction) {
     getFocussableElements('all');
-    // getFocussableElements('category');
-    // getFocussableElements('content');
-    let nextElement;
+    /* getFocussableElements('category');
+     * getFocussableElements('content');  */
+     let nextElement;
     if (focusIndex > -1) {
         switch (direction) {
             case ("next"):
@@ -53,9 +56,10 @@ let focusElement = function (direction) {
     }
 }
 
-//Function to log keypresses and save them as vars defined at head, then keep listening for keypresses
-//@TODO refactor to loop, based on how many buttons available.
-//@TODO next pass, tidy and make make
+/* Function to log keypresses and save them as vars defined at head, then keep listening for keypresses.
+ * @TODO refactor to loop, based on how many buttons available.
+ * @TODO next pass, tidy and make make
+ *  */
 let assignShortcut = function () {
     window.addEventListener("keydown", function (event) {
         if (event.defaultPrevented) {
@@ -76,25 +80,28 @@ let assignShortcut = function () {
             this.console.log("select assigned to " + selectKey);
             return;
         }
-        // Shortcut listener - once assigned
+        /* Shortcut listener - once assigned  */
         if (event.key == leftKey) {
-            //this.console.log("left Key pressed");
+            /* this.console.log("left Key pressed");  */
             focusElement("prev");
         } else if (event.key == rightKey) {
-            //this.console.log("right Key pressed");
+            /* this.console.log("right Key pressed");  */
             focusElement("next");
         } else if (event.key == selectKey) {
-            // this.console.log("select Key pressed");
+            /* this.console.log("select Key pressed");  */
             this.document.activeElement.click();
         }
     }, true)
 }
 
-//return undefined to reset keys
+/* funtion return undefined to reset keys.
+ */
 let setUndefined = function () {
     return;
 }
 
+/* funtion reset all shortcut keys.
+ */
 let resetShortcuts = function () {
     leftKey = setUndefined();
     rightKey = setUndefined();
